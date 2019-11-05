@@ -6,9 +6,9 @@ name: $(Date:yyyyMMdd)$(Rev:.r)-psfiddle
 resources:
   repositories: 
   - repository: PSFiddle
-    endpoint: heflore
+    endpoint: hecflores
     type: github
-    name: heflore/PSFiddle
+    name: hecflores/PSFiddle
     
 trigger:
   branches:
