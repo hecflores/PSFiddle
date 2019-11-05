@@ -40,7 +40,7 @@ stages:
         - script: dotnet pack -p:PackageVersion=$(packageVersion) -o src/pkgs/nuget/NetCore/PSFiddle
           displayName: Pack PSFiddle
           workingDirectory: src/pkgs/nuget/NetCore/PSFiddle
-        - script: dotnet nuget push *.nupkg -k oy2lrq4gn6ipf4zpxyjqxdgux6j7ld3e3fvovn2rpqdsxy
+        - script: dotnet nuget push **/*.nupkg -k oy2lrq4gn6ipf4zpxyjqxdgux6j7ld3e3fvovn2rpqdsxy
           displayName: Push PSFiddle
           workingDirectory: src/pkgs/nuget/NetCore/PSFiddle
           
