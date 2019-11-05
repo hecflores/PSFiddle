@@ -21,12 +21,12 @@ stages:
   - stage: Build 
     displayName: Build PSFiddle
     jobs:  
-       job: Build
-       displayName: Build PSFiddle
-       pool:
-          vmImage: 'ubuntu-latest'
-       steps:
-          script: dotnet build
-          displayName: Build PSFiddle
-          workingDirectory: src/pkgs/nuget/NetCore/PSFiddle
+    - job: Build
+      displayName: Build PSFiddle
+      pool:
+        vmImage: 'ubuntu-latest'
+      steps:
+        script: dotnet build
+        displayName: Build PSFiddle
+        workingDirectory: src/pkgs/nuget/NetCore/PSFiddle
        
