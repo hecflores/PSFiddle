@@ -6,7 +6,7 @@ name: $(Date:yyyyMMdd)$(Rev:.r)-psfiddle
 variables:
   majorVersion: 1
   minorVersion: 0
-  packageVersion: $(majorVersion).$(minorVersion).$(Rev:.r)
+  packageVersion: $(majorVersion).$(minorVersion).$(Build.BuildNumber)
 resources:
   repositories: 
   - repository: PSFiddle
