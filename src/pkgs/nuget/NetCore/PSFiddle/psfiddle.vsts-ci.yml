@@ -6,6 +6,7 @@ name: $(Date:yyyyMMdd)$(Rev:.r)-psfiddle
 resources:
   repositories: 
   - repository: PSFiddle
+    endpoint: heflore
     type: github
     name: heflore/PSFiddle
     
