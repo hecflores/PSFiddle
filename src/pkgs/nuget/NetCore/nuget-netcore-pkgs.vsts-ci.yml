@@ -3,7 +3,7 @@
 name: $(Date:yyyyMMdd)$(Rev:.r)-${{ parameters.suffix }}
 
 resources:
-  repositories:
+  repositories: 
   - repository: PSFiddle
     type: github
     name: heflore/PSFiddle
