@@ -1,10 +1,32 @@
 
 
-template: src/pkgs/nuget/NetCore/nuget-netcore-pkgs.vsts-ci.yml  # Template reference
-  - parameters:
-    name: PSFiddle
-    folder: src/pkgs/nuget/NetCore/PSFiddle
-    suffix: psfiddle
-       
+
+name: $(Date:yyyyMMdd)$(Rev:.r)-psfiddle
+
+resources:
+  repositories: 
+  - repository: PSFiddle
+    type: github
+    name: heflore/PSFiddle
     
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - src/pkgs/nuget/NetCore/PSFiddle
    
+stages:
+  - stage: Build 
+    displayName: Build PSFiddle
+    jobs:  
+       job: Build
+       displayName: Build PSFiddle
+       pool:
+          vmImage: 'ubuntu-latest'
+       steps:
+          script: dotnet build
+          displayName: Build PSFiddle
+          workingDirectory: src/pkgs/nuget/NetCore/PSFiddle
+       
