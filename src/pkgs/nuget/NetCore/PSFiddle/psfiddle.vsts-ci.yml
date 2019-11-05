@@ -22,6 +22,14 @@ stages:
   - stage: Build 
     displayName: Build PSFiddle
     jobs:  
+    - job: Restore
+      displayName: Restore PSFiddle
+      pool:
+        vmImage: 'ubuntu-latest'
+      steps:
+        - script: dotnet restore
+          displayName: Restore PSFiddle
+          workingDirectory: src/pkgs/nuget/NetCore/PSFiddle
     - job: Build
       displayName: Build PSFiddle
       pool:
