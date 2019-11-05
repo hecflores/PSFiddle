@@ -1,0 +1,47 @@
+
+
+
+name: $(Date:yyyyMMdd)$(Rev:.r)-psfiddle
+
+variables:
+  majorVersion: 1
+  minorVersion: 0
+  packageVersion: $(majorVersion).$(minorVersion).$(Build.BuildNumber)
+resources:
+  repositories: 
+  - repository: PSFiddle
+    endpoint: hecflores
+    type: github
+    name: hecflores/PSFiddle
+    
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - src/pkgs/nuget/NetCore/PSFiddle.UIAutomation
+   
+stages:
+  - stage: Build 
+    displayName: Build PSFiddle.UIAutomation
+    jobs:  
+    - job: Build
+      displayName: Build PSFiddle.UIAutomation
+      pool:
+        vmImage: 'windows-latest'
+      steps:
+        - script: dotnet restore
+          displayName: Restore PSFiddle.UIAutomation
+          workingDirectory: src/pkgs/nuget/NetCore/PSFiddle.UIAutomation
+        - script: dotnet build
+          displayName: Build PSFiddle.UIAutomation
+          workingDirectory: src/pkgs/nuget/NetCore/PSFiddle.UIAutomation
+        - script: dotnet pack -p:PackageVersion=$(packageVersion) -o src/pkgs/nuget/NetCore/PSFiddle
+          displayName: Pack PSFiddle.UIAutomation
+          workingDirectory: src/pkgs/nuget/NetCore/PSFiddle.UIAutomation
+        - script: dotnet nuget push **/*.nupkg -k oy2lrq4gn6ipf4zpxyjqxdgux6j7ld3e3fvovn2rpqdsxy -s https://www.nuget.org/
+          displayName: Push PSFiddle.UIAutomation
+          workingDirectory: src/pkgs/nuget/NetCore/PSFiddle.UIAutomation
+          
+          
