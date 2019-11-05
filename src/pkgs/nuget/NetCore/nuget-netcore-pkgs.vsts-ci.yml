@@ -1,0 +1,34 @@
+
+
+name: $(Date:yyyyMMdd)$(Rev:.r)-${{ parameters.suffix }}
+
+resources:
+  repositories:
+  - repository: PSFiddle
+    type: github
+    name: heflore/PSFiddle
+    
+trigger:
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - ${{ parameters.folder }}
+   
+stages:
+  - stage: Build 
+    displayName: Build ${{ parameters.name }}
+    jobs:  
+       job: Build
+       displayName: Build ${{ parameters.name }}
+       pool:
+          vmImage: 'ubuntu-latest'
+       steps:
+          script: dotnet build
+          displayName: Build ${{ parameters.name }}
+          workingDirectory: ${{ parameters.folder }}
+       
+       
+    
+   

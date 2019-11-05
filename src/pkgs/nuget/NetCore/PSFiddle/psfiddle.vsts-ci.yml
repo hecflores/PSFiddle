@@ -1,0 +1,10 @@
+
+
+template: src/pkgs/nuget/NetCore/nuget-netcore-pkgs.vsts-ci.yml  # Template reference
+  - parameters:
+    name: PSFiddle
+    folder: src/pkgs/nuget/NetCore/PSFiddle
+    suffix: psfiddle
+       
+    
+   
