@@ -19,6 +19,9 @@ trigger:
     - src/pkgs/nuget/NetCore/PSFiddle
    
 stages:
+  - stage: Build 
+    displayName: Build PSFiddle
+    jobs:  
     - job: Build
       displayName: Build PSFiddle
       pool:
@@ -30,4 +33,3 @@ stages:
         - script: dotnet build
           displayName: Build PSFiddle
           workingDirectory: src/pkgs/nuget/NetCore/PSFiddle
-       
