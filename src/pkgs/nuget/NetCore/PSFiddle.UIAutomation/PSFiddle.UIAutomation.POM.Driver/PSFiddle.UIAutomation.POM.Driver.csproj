@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net461</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PSFiddle.UIAutomation.POM\PSFiddle.UIAutomation.POM.csproj" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="bin\$(Configuration)\net461\*.dll">
+		<PackagePath>tools\%(Filename)%(Extension)</PackagePath>
+	</Content>
+	<Content Include="bin\$(Configuration)\net461\*.exe">
+		<PackagePath>tools\%(Filename)%(Extension)</PackagePath>
+	</Content>
+	<Content Include="tools\*.ps1">
+		<PackagePath>tools\%(Filename)%(Extension)</PackagePath>
+	</Content>
+	<Content Include="build\*.*">
+		<PackagePath>build\net46\%(Filename)%(Extension)</PackagePath>
+	</Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="tools\StartPOM.ps1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="tools\StartPOM.ps1">
+      <PackagePath>tools\%(Filename)%(Extension)</PackagePath>
+    </Content>
+  </ItemGroup>
+
+</Project>

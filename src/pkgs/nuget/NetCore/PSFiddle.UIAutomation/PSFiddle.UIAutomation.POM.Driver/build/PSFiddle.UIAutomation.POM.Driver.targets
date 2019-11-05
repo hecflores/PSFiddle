@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project>
+
+  <Target Name="CleanPOMs" BeforeTargets="BeforeClean" >
+    <Error Condition="$(POMDriverUIProjectPath) == ''" Text="Page Object Target UI Project Not Set. Please set property $(POMDriverUIProjectPath) to the location of the Targeted UI Project"/>
+    <Error Condition="!Exists('$(POMDriverUIProjectPath)')" Text="Page Object Target UI Project Path '$(POMDriverUIProjectPath)' was not found"/>
+    <Error Condition="!( $(POMDriverUIProjectPath.EndsWith('\')) or $(POMDriverUIProjectPath.EndsWith('/')) ) " Text="Page Object Target UI Project Path '$(POMDriverUIProjectPath)' was invalid, expected to end with '\' or '/'"/>
+    <ItemGroup>
+      <PageObjectFiles Include="$(MSBuildProjectDirectory)\.pom\**\*.cs"/>
+    </ItemGroup>
+    
+    <Delete Files="@(PageObjectFiles)" />
+    <RemoveDir Directories="$(MSBuildProjectDirectory)\.pom" />
+  </Target>
+  
+  <Target Name="CreatePOMs" BeforeTargets="BeforeBuild" >
+    <Error Condition="$(POMDriverUIProjectPath) == ''" Text="Page Object Target UI Project Not Set. Please set property $(POMDriverUIProjectPath) to the location of the Targeted UI Project"/>
+    <Error Condition="!Exists('$(POMDriverUIProjectPath)')" Text="Page Object Target UI Project Path '$(POMDriverUIProjectPath)' was not found"/>
+    <Error Condition="!( $(POMDriverUIProjectPath.EndsWith('\')) or $(POMDriverUIProjectPath.EndsWith('/')) ) " Text="Page Object Target UI Project Path '$(POMDriverUIProjectPath)' was invalid, expected to end with '\' or '/'"/>
+
+    <MakeDir Directories="$(POMDriverAutomationPath).pom" Condition="!Exists('$(POMDriverAutomationPath).pom')"/>
+    
+    <PropertyGroup>
+      <Message>Generating POM Classes</Message>
+      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+      <POMStartPOMScriptCode>&amp;'$(POMStartPOMScript)' '$(POMDriverFullPath)' '$(POMDriverAutomationPath)' '$(POMDriverUIProjectPath)' </POMStartPOMScriptCode>
+      <POMExecutePOMScriptCode>&amp;'$(POMExecutePOMScript)' '$(POMDriverFullPath)' '$(POMDriverAutomationPath)' '$(POMDriverUIProjectPath)' </POMExecutePOMScriptCode>
+
+      <POMGenerationIsNeeded Condition=" $(POMGenerationIsNeeded) != 'true' and  !Exists('$(POMDriverAutomationPath).pom\IPages.cs')" >true</POMGenerationIsNeeded>
+      <POMGenerationIsNeeded Condition=" $(POMGenerationIsNeeded) != 'true' and  !Exists('$(POMDriverAutomationPath).pom\Pages.cs')" >true</POMGenerationIsNeeded>
+    </PropertyGroup>
+
+    
+    
+    
+    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { $(POMExecutePOMScriptCode) } &quot;" Condition=" $(POMGenerationIsNeeded) == 'true'  " />
+
+    <ItemGroup Condition="'$(POMGenerationIsNeeded)' == 'true'">
+      <Compile Remove=".pom\**\*.cs"/>
+      <Compile Include=".pom\**\*.cs"/>
+    </ItemGroup>
+    
+  </Target>
+</Project>

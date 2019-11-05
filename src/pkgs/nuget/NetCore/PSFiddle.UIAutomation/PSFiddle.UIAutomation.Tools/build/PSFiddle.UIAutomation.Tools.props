@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project>
+  <PropertyGroup Condition=" '$(MetisToolsProperties)' != 'true'" >
+    <MetisPackagePath>$(MSBuildThisFileDirectory)..\</MetisPackagePath>
+    <MetisToolsToolsPath>$(MetisPackagePath)tools\</MetisToolsToolsPath>
+    <PS1CodeScript>$(MetisToolsToolsPath)Metis.Tools\BuildScripts\GenerateAllPs1CodeFiles.ps1</PS1CodeScript>
+    <SQLCodeScript>$(MetisToolsToolsPath)Metis.Tools\BuildScripts\GenerateAllSqlCodeFiles.ps1</SQLCodeScript>
+    <InstallModulesScript>$(MetisToolsToolsPath)Metis.Tools\BuildScripts\StartInstallingMetisModules.ps1</InstallModulesScript>
+    <ChangeAppSettingsScript>$(MetisToolsToolsPath)Metis.Tools\BuildScripts\UpdateAppConfig.ps1</ChangeAppSettingsScript>
+    <CleanFeatureFilesScript>$(MetisToolsToolsPath)Metis.Tools\BuildScripts\CleanFeatureFiles.ps1</CleanFeatureFilesScript>
+    <AppConfigTransformScript>$(MetisToolsToolsPath)Metis.Tools\BuildScripts\AppSettingsTransform.ps1</AppConfigTransformScript>
+    
+    <SpecFlow_SkipMsbuildFeatureFileGeneration Condition="'$(SpecFlow_SkipMsbuildFeatureFileGeneration)' == ''">false</SpecFlow_SkipMsbuildFeatureFileGeneration>
+    <MetisToolsProperties>true</MetisToolsProperties>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileDirectory)</MSBuildAllProjects>
+  </PropertyGroup>
+ 
+
+  <!-- Clear Existing Files -->
+  <ItemGroup>
+    <None Remove="**\*.exe" />
+    <None Remove="**\*.json" />
+    <None Remove="**\*.ps1" />
+    <None Remove="**\*.js" />
+    <None Remove="**\*.sql" />
+    <None Remove="**\*.csv" />
+    <None Remove="**\*.runsettings" />
+    <None Remove="**\*.html" />
+  </ItemGroup>
+
+  <!-- Add new file types -->
+  <ItemGroup>
+    <EmbeddedResource Include="**\*.exe" Exclude="obj/**;bin/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="**\*.json" Exclude="obj/**;bin/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="**\*.ps1" Exclude="obj/**;bin/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="**\*.js" Exclude="obj/**;bin/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="**\*.sql" Exclude="obj/**;bin/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="**\*.csv" Exclude="obj/**;bin/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="**\*.runsettings" Exclude="obj/**;bin/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="**\*.html" Exclude="obj/**;bin/**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+
+  
+  <!-- Add new file types -->
+  <ItemGroup>
+    <!-- Sql Generated Classes -->
+    <Compile Update="**\*.sql.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <!-- PowerShell Script Generated Classes -->
+    <Compile Update="**\*.ps1.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    <!-- Test Case Implementations -->
+    <Compile Update="**\*.Implementation.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>$([System.String]::Copy('%(Filename)').Replace('Implementation','feature'))</DependentUpon>
+    </Compile>
+    <!-- Test Case Keywords -->
+    <Compile Update="**\*.Keywords.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>$([System.String]::Copy('%(Filename)').Replace('Keywords','feature'))</DependentUpon>
+    </Compile>
+    <!-- Test Case SpecFlow Generations -->
+    <Compile Update="**\*.feature.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>%(Filename)</DependentUpon>
+    </Compile>
+    
+  </ItemGroup>
+  
+  
+
+  
+</Project>

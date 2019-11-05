@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-16"?>
+<!-- 
+Description:
+   Used to Define Release Changes Defenitions 
+Owner
+   Hector Flores
+-->
+
+<Settings>
+	<!-- Parameters are things that can either 
+	     1) Live as an environment variable (Meaning a variable in the release)
+		 2) Be passed in as arguments                   -->	
+	<Parameters>
+		<!-- R e q u i r e d   P a r a m e t e r s -->
+		<Parameter Name="ProjectFile"/>		
+		<Parameter Name="VSTSAccount" DefaultValue="mcprojectalpha"/>
+		<Parameter Name="PersonalAccessToken" DefaultValue="zfo5yuybuxbz76wvmmtetpuecsivs2vysv2bdlh4cpvif7oxq27q"/>
+		
+		<Parameter Name="UserStory" DefaultValue="Something"/>
+		
+		<Parameter Name="Name" DefaultValue="US_$(UserStory)"/>
+		<Parameter Name="FeatureFilePath" DefaultValue="Tests\UserStories\$(Name)\VSTS"/>
+		<Parameter Name="VSTSQuery" DefaultValue="SELECT Target.[System.Id], Target.[System.Links.LinkType], Target.[System.Title], Target.[System.CreatedBy], Target.[System.AssignedTo], Target.[System.State], [Microsoft.VSTS.Scheduling.RemainingWork], Target.[System.Tags], Target.[System.AreaPath], [AlphaAgileProcess.StoryType], Target.[System.IterationPath], [Microsoft.VSTS.Common.AcceptanceCriteria] FROM WorkItemLinks WHERE (Source.[System.WorkItemType] = 'User Story' and Source.[System.State] &lt;&gt; 'Removed' AND Source.[Id] = $(UserStory)) and ([System.Links.LinkType] &lt;&gt; '') and (Target.[System.WorkItemType] = 'Test Case') ORDER BY [System.Id] mode(MayContain)"/>
+	</Parameters>
+	
+	<!-- Variables are things variables that are set locally. Not expected as a parameter  -->
+	<!-- Naming Conventions. Usually used for things that are hard coded in Config.ps1 scripts
+		     Evetually we want to move XML configuration for all apis and UI but fot now we need to 
+			 have this section to control the naming that is used by all scripts -->
+	<Variables>
+		
+	</Variables>
+	
+</Settings>

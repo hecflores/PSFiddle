@@ -1,0 +1,11 @@
+﻿Cmdlets that can be used:
+   Show-Metis                 - General Info for Metis
+   Uninstall-MetisVSExtension - Uninstalls the Visual Studios Metis Extension
+   Install-MetisVSExtension   - Installs the Visual Studios Metis Extension
+   Open-MetisProject          - Opens the project in visual studios
+   Set-DefaultMetisProject    - Sets the default metis project
+   Get-DefaultMetisProject    - Get the default metis project
+   Open-TestCase              - A Specific Test Case in Metis Project
+   Get-DefaultMetisProject    - Get the default metis project
+   Add-MyIPToDevStms          - Adds your IP to the dev stms environment
+   Add-MyIPToDevCdms          - Adds your IP to the dev cdms environment

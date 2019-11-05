@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project>
+  <PropertyGroup Condition=" '$(POMDriverProperties)' != 'true'" >
+    <POMToolsPath>$(MSBuildThisFileDirectory)..\..\tools\</POMToolsPath>
+    <POMDriverFullPath Condition=" '$(POMDriverFullPath)' == ''">$(POMToolsPath)PSFiddle.UIAutomation.POM.Driver.exe</POMDriverFullPath>
+    
+    <POMDriverAutomationPath  Condition=" '$(POMDriverAutomationPath)' == ''">$(MSBuildProjectDirectory)\</POMDriverAutomationPath>
+    <POMDriverUIProjectPath  Condition=" '$(POMDriverUIProjectPath)' == ''">$(POMDriverUIProjectPath)</POMDriverUIProjectPath>
+
+    <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+
+    <POMExecutePOMScript>$(POMToolsPath)\ExecutePOM.ps1</POMExecutePOMScript>
+    <POMStartPOMScript>$(POMToolsPath)\StartPOM.ps1</POMStartPOMScript>
+    <POMPreCleanScript>$(POMToolsPath)\PreClean.ps1</POMPreCleanScript>
+    
+    <POMDriverProperties >true</POMDriverProperties>
+  </PropertyGroup>
+  <ItemGroup Condition="Exists('$(POMDriverUIProjectPath)')">
+    <POMCompileFiles Include="$(POMDriverUIProjectPath)**\*.POM.cs">
+      
+      <OriginalCSFile>$(Identity)</OriginalCSFile>
+      <RelativeCSFile>$(RecursiveDir)\%(Filename)%(FileExtension)</RelativeCSFile>
+
+      <OriginalHTMLFile>$([System.String]::Copy('%(Identity)').Replace('.POM.','.html'))</OriginalHTMLFile>
+      <RelativeHtmlFile>$(RecursiveDir)$([System.String]::Copy('%(Filename)').Replace('POM','html'))</RelativeHtmlFile>
+
+      <OriginalAutomationFile>$([System.String]::Copy('%(Identity)').Replace('.POM.','.automationmaster.generated'))</OriginalAutomationFile>
+      <RelativeAutomationFile>$(RecursiveDir)$([System.String]::Copy('%(Filename)').Replace('POM','html'))</RelativeAutomationFile>
+    </POMCompileFiles>
+
+
+  </ItemGroup>
+</Project>

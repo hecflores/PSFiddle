@@ -1,0 +1,64 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net461</TargetFrameworks>
+	
+	<MSBuildTasksVersion>1.5.0.235</MSBuildTasksVersion>
+	<XmlTransformTaskVersion>1.0.27</XmlTransformTaskVersion>
+	<MCVSExtensionVersion>2.0.144-alphamerge</MCVSExtensionVersion>
+	<SpecFlowVersion>2.4.1</SpecFlowVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+	  <PackageReference Include="MC.VS.Extension" Version="$(MCVSExtensionVersion)" />
+	  <PackageReference Include="SpecFlow.SharedStepFeature.SpecFlowPlugin" Version="2.0.90-alphamerge" />
+	  <PackageReference Include="SpecFlow.SyncVSTS.SpecFlowPlugin" Version="2.0.90-alphamerge" />
+    <PackageReference Include="MSBuildTasks" Version="$(MSBuildTasksVersion)" PrivateAssets="All" />
+    <PackageReference Include="SpecFlow" Version="$(SpecFlowVersion)" PrivateAssets="All" />
+    <PackageReference Include="XmlTransform.Tasks" Version="$(XmlTransformTaskVersion)" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="tools\PSModules\" />
+  </ItemGroup>
+  <ItemGroup>
+   <None Remove="content\**\*.*" />
+   <None Remove="tools\**\*.*" />
+   <None Remove="build\**\*.*" />
+ </ItemGroup>
+ 
+ <ItemGroup>
+	<Content Include="$(NuGetPackageRoot)specflow\$(SpecFlowVersion)\tools\**\*.*" Link="tools\SpecFlow\%(RecursiveDir)%(Filename)%(Extension)">
+		<PackagePath>tools\SpecFlow\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+	</Content>
+	<Content Include="$(NuGetPackageRoot)xmltransform.tasks\$(XmlTransformTaskVersion)\tools\**\*.*" Link="tools\AppSettingsTransform\%(RecursiveDir)%(Filename)%(Extension)">
+		<PackagePath>tools\AppSettingsTransform\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+	</Content>
+	<Content Include="$(NuGetPackageRoot)mc.vs.extension\$(MCVSExtensionVersion)\tools\**\*.*" Link="tools\MCVSExtension\%(RecursiveDir)%(Filename)%(Extension)">
+		<PackagePath>tools\MCVSExtension\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+	</Content>
+	<Content Include="bin\$(Configuration)\net461\SpecFlow.SharedStepFeature.SpecFlowPlugin.dll" Link="content\SpecFlowPlugin\SpecFlow.SharedStepFeature.SpecFlowPlugin.dll">
+		<PackagePath>tools\contentFiles\SpecFlowPlugin\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+	</Content>
+	<Content Include="bin\$(Configuration)\net461\SpecFlow.SyncVSTS.SpecFlowPlugin.dll" Link="content\SpecFlowPlugin\SpecFlow.SyncVSTS.SpecFlowPlugin.dll">
+		<PackagePath>tools\contentFiles\SpecFlowPlugin\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+	</Content>
+	
+	<Content Include="content\**\*.*">
+		<PackagePath>tools\contentFiles\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+	</Content>
+	<Content Include="tools\**\*.*">
+		<PackagePath>tools\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+	</Content>
+	<Content Include="build\**\*.*">
+		<PackagePath>build\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+	</Content>
+  </ItemGroup>
+ 
+ <ItemGroup>
+   <Content Update="tools\Metis.Tools\BuildScripts\CleanFeatureFiles.ps1">
+     <PackagePath>tools\%(RecursiveDir)%(Filename)%(Extension)</PackagePath>
+   </Content>
+ </ItemGroup>
+ 
+</Project>

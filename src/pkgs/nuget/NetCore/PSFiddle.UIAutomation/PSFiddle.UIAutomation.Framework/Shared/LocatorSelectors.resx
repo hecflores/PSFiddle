@@ -1,0 +1,1374 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountDetailsPage_CompanyDetailsHeader" xml:space="preserve">
+    <value>//h4[@id="compToggle"]</value>
+  </data>
+  <data name="AdminSearchDirectory_ColumnAddress" xml:space="preserve">
+    <value>//td[2]</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="AdminSearchDirectory_ColumnCity" xml:space="preserve">
+    <value>//td[3]</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="AdminSearchDirectory_ColumnCompanyName" xml:space="preserve">
+    <value>//*[contains(@class,"org-info-link")]</value>
+  </data>
+  <data name="AdminSearchDirectory_ColumnCountry" xml:space="preserve">
+    <value>//td[4]</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="AdminSearchDirectory_ColumnViewAs" xml:space="preserve">
+    <value>//td[5]/button</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="AdminSearchDirectory_RealTimeSearchText" xml:space="preserve">
+    <value>//[@id="alphaSearch"]</value>
+  </data>
+  <data name="AdminSearchDirectory_Row" xml:space="preserve">
+    <value>//tr[contains(@ng-repeat, "organization")]</value>
+  </data>
+  <data name="AdminSearchDirectory_SearchButton" xml:space="preserve">
+    <value>//*[@id='submitSearchBtn']</value>
+  </data>
+  <data name="AdminSearchDirectory_SearchText" xml:space="preserve">
+    <value>//*[@id='companysearch']</value>
+  </data>
+  <data name="AdminSearchDirectory_StopViewAs" xml:space="preserve">
+    <value>//*[contains(text(), "Stop view as")]</value>
+  </data>
+  <data name="AdminSearchDirectory_Table" xml:space="preserve">
+    <value>//div[@ng-show="searchHasResults"]</value>
+  </data>
+  <data name="AdminSearchDirectory_ViewAsModal" xml:space="preserve">
+    <value>//*[@id="confirmAdminView"]</value>
+  </data>
+  <data name="AdminSearchDirectory_ViewAsModal_Cancel" xml:space="preserve">
+    <value>//*[contains(@class,"modal-footer")]//*[contains(text(),"Cancel")]</value>
+  </data>
+  <data name="AdminSearchDirectory_ViewAsModal_CancelTopRight" xml:space="preserve">
+    <value>//*[@id="confirmAdminView"]//*[contains(@class,"modal-header")]//*[@data-dismiss="modal"]</value>
+  </data>
+  <data name="AdminSearchDirectory_ViewAsModal_Confirm" xml:space="preserve">
+    <value>//*[contains(@ng-click,"goToCompany")]</value>
+  </data>
+  <data name="Admin_TrackDirectory_RegisterCompany" xml:space="preserve">
+    <value>//*[contains(text(),'Register a new company in Track')]</value>
+  </data>
+  <data name="Advanced_Search_Company_Name" xml:space="preserve">
+    <value>//*[@name='companyName']</value>
+  </data>
+  <data name="Advanced_Search_Search_Button" xml:space="preserve">
+    <value>//button[.='Search']</value>
+  </data>
+  <data name="Advanced_Search_Table_Organization_Company_Name_Column" xml:space="preserve">
+    <value>//tr[contains(@ng-repeat,'organization')]//*[contains(@class,"org-info-link")]</value>
+  </data>
+  <data name="Advanced_Search_Table_Organization_Is_Selected_Column" xml:space="preserve">
+    <value>//tr[contains(@ng-repeat,'organization')]//*[@data-ng-model="organization.selected"]</value>
+  </data>
+  <data name="Advanced_Search_Toggle" xml:space="preserve">
+    <value>//button[contains(text(),'Advanced Search')]</value>
+  </data>
+  <data name="AliasAddress_AddAlias_Checkbox_C6" xml:space="preserve">
+    <value>.//*[@id='chkaddAlias']</value>
+  </data>
+  <data name="AliasAddress_AddAlias_Checkbox_Counterparty" xml:space="preserve">
+    <value>(//input[@id='chkaddAlias'])[2]</value>
+  </data>
+  <data name="AliasAddress_Addressline1_C6" xml:space="preserve">
+    <value>.//*[@id='address']</value>
+  </data>
+  <data name="AliasAddress_Addressline1_Counterparty" xml:space="preserve">
+    <value>(//input[@id='address'])[2]</value>
+  </data>
+  <data name="AliasAddress_Addressline2_C6" xml:space="preserve">
+    <value>.//*[@id='address2']</value>
+  </data>
+  <data name="AliasAddress_Addressline2_Counterparty" xml:space="preserve">
+    <value>(//input[@id='address2'])[2]</value>
+  </data>
+  <data name="AliasAddress_City_C6" xml:space="preserve">
+    <value>.//*[@id='city']</value>
+  </data>
+  <data name="AliasAddress_City_Counterparty" xml:space="preserve">
+    <value>(//input[@id='city'])[2]</value>
+  </data>
+  <data name="AliasAddress_Country_C6" xml:space="preserve">
+    <value>.//*[@id='country']</value>
+  </data>
+  <data name="AliasAddress_Country_Counterparty" xml:space="preserve">
+    <value>(//input[@id='country'])[2]</value>
+  </data>
+  <data name="AliasAddress_SourceID_C6" xml:space="preserve">
+    <value>.//input[@id='organizationSourceId']</value>
+  </data>
+  <data name="AliasAddress_SourceID_Counterparty" xml:space="preserve">
+    <value>.//*[@id='sourceId']</value>
+  </data>
+  <data name="AliasAddress_State_C6" xml:space="preserve">
+    <value>.//*[@id='state']</value>
+  </data>
+  <data name="AliasAddress_State_Counterparty" xml:space="preserve">
+    <value>(//input[@id='state'])[2]</value>
+  </data>
+  <data name="AliasAddress_Zip_C6" xml:space="preserve">
+    <value>.//*[@id='zip']</value>
+  </data>
+  <data name="AliasAddress_Zip_Counterparty" xml:space="preserve">
+    <value>(//input[@id='zip'])[2]</value>
+  </data>
+  <data name="Azure_Login_UserAnotherAccount" xml:space="preserve">
+    <value>//div[contains(text(),'Use another')]</value>
+  </data>
+  <data name="button_c6_Confirm" xml:space="preserve">
+    <value>.//*[@id='btnc6Confirm']</value>
+  </data>
+  <data name="button_c6_Save" xml:space="preserve">
+    <value>.//*[@id='btnc6Save']</value>
+  </data>
+  <data name="BuyerInvitations_Pending_Column_Accept" xml:space="preserve">
+    <value>//*[contains(text(), "Accept")]</value>
+  </data>
+  <data name="BuyerInvitations_Pending_Column_CompanyName" xml:space="preserve">
+    <value>//*[contains(@class, "org-info-link")]</value>
+  </data>
+  <data name="BuyerInvitations_Pending_Column_Reject" xml:space="preserve">
+    <value>//*[contains(text(), "Reject")]</value>
+  </data>
+  <data name="BuyerInvitations_Pending_Rows" xml:space="preserve">
+    <value>//*[@id='pending_panel_received']//tr[contains(@ng-repeat,"invitationsReceived")]</value>
+  </data>
+  <data name="BuyerInvitations_Sent_Rows" xml:space="preserve">
+    <value>//*[@id='pending_panel']//tr[contains(@ng-repeat,"invitations")]</value>
+  </data>
+  <data name="C6NoMatch_AliasAddressWindow_Add1" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_AliasAddressWindow_Add1"]</value>
+  </data>
+  <data name="C6NoMatch_AliasAddressWindow_Add2" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_AliasAddressWindow_Add2"]</value>
+  </data>
+  <data name="C6NoMatch_AliasAddressWindow_City" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_AliasAddressWindow_City"]</value>
+  </data>
+  <data name="C6NoMatch_AliasAddressWindow_State" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_AliasAddressWindow_State"]</value>
+  </data>
+  <data name="C6NoMatch_AliasAddressWindow_Zip" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_AliasAddressWindow_Zip"]</value>
+  </data>
+  <data name="C6NoMatch_AliasAddress_CheckBox" xml:space="preserve">
+    <value>//*[@ui-element="AliasAddress_AddAlias_Checkbox"]</value>
+  </data>
+  <data name="C6NoMatch_AliasAddress_DisplayWindow" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_AliasAddress_DisplayWindow"]</value>
+  </data>
+  <data name="C6NoMatch_Close_Button" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Close_Button"]</value>
+  </data>
+  <data name="C6NoMatch_CompanyFound_ValidationMessage" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatchDetailsForm_CompanyFoundValidationMessage"]</value>
+  </data>
+  <data name="C6NoMatch_Details_Modal" xml:space="preserve">
+    <value>//*[@id="c6NoMatchModal"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_Address1" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_Address1"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_Address2" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_Address2"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_City" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_City"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_CompanyID" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_CompanyID"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_CompanyName" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_CompanyName"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_CompanyPhone" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_CompanyPhone"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_CompanyURL" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_CompanyURL"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_Country" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_Country"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_Details_Section" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_Details_Section"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_Form_Section" xml:space="preserve">
+    <value>//*[@name='c6NoMatchUpdateForm']</value>
+  </data>
+  <data name="C6NoMatch_Detail_RequestID" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_RequestID"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_State" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_State"]</value>
+  </data>
+  <data name="C6NoMatch_Detail_Zip" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Detail_Zip"]</value>
+  </data>
+  <data name="C6NoMatch_Disposition_Dropdown" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatchDetailsForm_DispositionDropdown"]</value>
+  </data>
+  <data name="C6NoMatch_NoCompanyFound_ValidationMessage" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_NoCompanyFound_ValidationMessage"]</value>
+  </data>
+  <data name="C6NoMatch_Save_Button" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Save_Button"]</value>
+  </data>
+  <data name="C6NoMatch_SourceId_Input" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_SourceId_Input"]</value>
+  </data>
+  <data name="C6NoMatch_Source_DropDown" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_Source_DropDown"]</value>
+  </data>
+  <data name="C6NoMatch_TrackId_Input" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_TrackId_Input"]</value>
+  </data>
+  <data name="C6NoMatch_ValidateOverwrite_CancelButton" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_ValidateOverwrite_CancelButton"]</value>
+  </data>
+  <data name="C6NoMatch_ValidateOverwrite_ConfirmationModal" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_ValidateOverwrite_ConfirmationModal"]</value>
+  </data>
+  <data name="C6NoMatch_ValidateOverwrite_ContinueButton" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_ValidateOverwrite_ContinueButton"]</value>
+  </data>
+  <data name="C6NoMatch_ValidatingCompany_ValidationMessage" xml:space="preserve">
+    <value>//*[ui-element="C6NoMatch_ValidatingCompany_ValidationMessage"]</value>
+  </data>
+  <data name="ComplianceLinkingAcceptance_Continue" xml:space="preserve">
+    <value>//*[@ui-element="ComplianceLinkingAcceptance_Continue"]</value>
+  </data>
+  <data name="Compliance_And_Media_Edit_Compliance_Linkage" xml:space="preserve">
+    <value>//*[@ui-element="Compliance_And_Media_Edit_Compliance_Linkage"]</value>
+  </data>
+  <data name="Confirmation_Dialog_Action" xml:space="preserve">
+    <value>//*[@ui-element="Confirmation_Dialog_Action"]</value>
+  </data>
+  <data name="Confirmation_Dialog_Close" xml:space="preserve">
+    <value>//*[@ui-element='Confirmation_Dialog_Close']</value>
+  </data>
+  <data name="Confirmation_Dialog_Root" xml:space="preserve">
+    <value>//*[@ui-element="Confirmation_Dialog_Root"]</value>
+  </data>
+  <data name="CounterPartyFilePopup" xml:space="preserve">
+    <value>//main//*[@id="noMatchDetailModal"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_AddressLine1" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_AddressLine1"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_AddressLine2" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_AddressLine2"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_AddressLine3" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_AddressLine3"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_Button_Save" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_Button_Save"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_CheckBox_AddAlias" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_CheckBox_AddAlias"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_City" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_City"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_City3" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_City3"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_CompanyFound_ValidationMessage" xml:space="preserve">
+    <value>//*[@ui-element="C6NoMatch_CompanyFoundValidationMessage"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_CompanyInformation" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_CompanyInformation"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_Condition" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_Condition"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_ContactInformation" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_ContactInformation"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_Country" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_Country"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_Country3" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_Country3"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_DropDown_Country" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_DropDown_Country"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_DropDown_Disposition" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_DropDown_Disposition"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_DropDown_Source" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_DropDown_Source"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_DropDown_State" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_DropDown_State"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_EIN" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_EIN"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_Phone" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_Phone"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_QueueKey" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_QueueKey"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_RegisteredBusinessName" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_RegisteredBusinessName"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_RegistrationNumber" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_RegistrationNumber"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_State" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_State"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_State3" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_State3"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_StreetAddress" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_StreetAddress"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_StreetAddress2" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_StreetAddress2"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_TextBox_Address" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_TextBox_Address"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_TextBox_City" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_TextBox_City"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_TextBox_Source" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_TextBox_Source"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_TextBox_TrackId" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_TextBox_TrackId"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_TextBox_Zip" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_TextBox_Zip"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_TIN" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_TIN"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_VAT" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_VAT"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_Zip" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_Zip"]</value>
+  </data>
+  <data name="CounterPartyFilePopup_Zip3" xml:space="preserve">
+    <value>//*[@ui-element="CounterPartyFilePopup_Zip3"]</value>
+  </data>
+  <data name="CounterpartyPage_BrowseButton" xml:space="preserve">
+    <value>//*[text()="Browse"]</value>
+  </data>
+  <data name="CounterpartyPage_ConfirmationModal" xml:space="preserve">
+    <value>//*[@id="ConfirmationModal"]</value>
+  </data>
+  <data name="CounterpartyPage_ConfirmationModal_OkButton" xml:space="preserve">
+    <value>//*[text()="Ok"]</value>
+  </data>
+  <data name="CounterpartyPage_FileInputElement" xml:space="preserve">
+    <value>//*[@id="fileInput"]</value>
+  </data>
+  <data name="CounterpartyPage_NavigationTabsSection" xml:space="preserve">
+    <value>//*[contains(@class,"nav-tabs")]</value>
+  </data>
+  <data name="CounterpartyPage_NavigationTabsSection_Item" xml:space="preserve">
+    <value>//*[@data-toggle="tab"]</value>
+  </data>
+  <data name="CounterpartyPage_UploadButton" xml:space="preserve">
+    <value>//*[text()="Upload"]</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable" xml:space="preserve">
+    <value>//table[contains(@class,"alpha-table")]</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_Actions" xml:space="preserve">
+    <value>//td[5]</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_Actions_Item" xml:space="preserve">
+    <value>//a</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_FileName" xml:space="preserve">
+    <value>//td[1]</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_LastNameFirstName" xml:space="preserve">
+    <value>//td[2]</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_Status" xml:space="preserve">
+    <value>//td[4]</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_UploadDate" xml:space="preserve">
+    <value>//td[3]</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Row" xml:space="preserve">
+    <value>//tr[contains(@ng-repeat,"paginatedUploadedFilesInfo")]</value>
+  </data>
+  <data name="CounterpartyPage_ValidationPanel" xml:space="preserve">
+    <value>//*[contains(@class,"panel-body")]</value>
+  </data>
+  <data name="CounterpartyPage_ValidationPanel_MessageItem" xml:space="preserve">
+    <value>//*[@ng-repeat]</value>
+  </data>
+  <data name="CounterParty_UploadedFiles_FirstCell" xml:space="preserve">
+    <value>//*[@id="uploadedFiles"]/div/table/tbody/tr[1]/td[1]</value>
+  </data>
+  <data name="Generic_Compliance_Icon" xml:space="preserve">
+    <value>//*[contains(@class,"fas")]</value>
+  </data>
+  <data name="Global_Spinner" xml:space="preserve">
+    <value>//*[@id="loading-spinner-center"]</value>
+  </data>
+  <data name="HomePage_AdminDropdown" xml:space="preserve">
+    <value>//h5[contains(text(),'Admin')]</value>
+  </data>
+  <data name="HomePage_FirstCompanyInSearchResult" xml:space="preserve">
+    <value>//table/tbody/tr[1]/td[2]/a</value>
+  </data>
+  <data name="HomePage_QueueOption" xml:space="preserve">
+    <value>//a[contains(text(),'Data Steward Queue')]</value>
+  </data>
+  <data name="HomePage_UploadFileToSearchLink" xml:space="preserve">
+    <value>//*[contains(text(),"Upload file to search")]</value>
+  </data>
+  <data name="LayoutPage_CompanyName" xml:space="preserve">
+    <value>//*[@class="active_company_name"]</value>
+  </data>
+  <data name="LayoutPage_SayHello" xml:space="preserve">
+    <value>//say-hello</value>
+  </data>
+  <data name="LayoutPage_SettingsContent" xml:space="preserve">
+    <value>//*[@class="settings-link"]/..</value>
+  </data>
+  <data name="LayoutPage_SettingsDropdown" xml:space="preserve">
+    <value>//*[@ui-element="LayoutPage_SettingsDropdown"]</value>
+  </data>
+  <data name="LayoutPage_SettingsDropdown_Items" xml:space="preserve">
+    <value>//*[@ui-element="LayoutPage_SettingsDropdown_Items"]</value>
+  </data>
+  <data name="LayoutPage_SettingsLink" xml:space="preserve">
+    <value>//*[@ui-element="LayoutPage_SettingsLink"]</value>
+  </data>
+  <data name="LayoutPage_UserName" xml:space="preserve">
+    <value>//*[@class="ms-Persona-primaryText"]</value>
+  </data>
+  <data name="Layout_SettingsDropdown_Item_Link" xml:space="preserve">
+    <value>//a</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="Linking_Button" xml:space="preserve">
+    <value>//*[@id="complianceLinkingModal"]/div/div/div[2]/div/div[4]/div/div[1]/div/div/table/tbody/tr/td[6]/div/button[1]</value>
+  </data>
+  <data name="MyFilesHighConfidence_FirstCheckBox" xml:space="preserve">
+    <value>//*[@id="highConfidenceMatch"]/mc-high-confidence/div/table/tbody/tr[1]/td[1]/input</value>
+  </data>
+  <data name="MyFilesHighConfidence_SecondCheckBox" xml:space="preserve">
+    <value>//*[@id="highConfidenceMatch"]/mc-high-confidence/div/table/tbody/tr[2]/td[1]/input</value>
+  </data>
+  <data name="MyFilesPage_Match_Results" xml:space="preserve">
+    <value>//*[@id='filesDropdown']</value>
+  </data>
+  <data name="MyFiles_ComplianceChart" xml:space="preserve">
+    <value>//*[@id='compliance-chart']</value>
+  </data>
+  <data name="MyFiles_CreditScoreChart" xml:space="preserve">
+    <value>//*[@id='credit-scores-chart']</value>
+  </data>
+  <data name="MyFiles_HighConfidenceMatch_Highlight" xml:space="preserve">
+    <value>//*[@ui-element="MatchInsights_HighConfidenceMatch_Highlight"]</value>
+  </data>
+  <data name="MyFiles_HighConfidence_Tab" xml:space="preserve">
+    <value>//*[@id="matchInsights"]</value>
+  </data>
+  <data name="MyFiles_Insights_Highlight" xml:space="preserve">
+    <value>//*[@ui-element="MatchInsights_Insights_Highlight"]</value>
+  </data>
+  <data name="MyFiles_LikelyMatch_Highlight" xml:space="preserve">
+    <value>//*[@ui-element="MatchInsights_LikelyMatch_Highlight"]</value>
+  </data>
+  <data name="MyFiles_MatchRateChart" xml:space="preserve">
+    <value>//*[@id='match-rate-chart']</value>
+  </data>
+  <data name="MyFiles_Match_Insights_Tab" xml:space="preserve">
+    <value>//*[@id='selectedFileName']</value>
+  </data>
+  <data name="MyFiles_NoMatch_Highlight" xml:space="preserve">
+    <value>//*[@ui-element="MatchInsights_NoMatch_Highlight"]</value>
+  </data>
+  <data name="MyFiles_SelectFile_DropDownItems" xml:space="preserve">
+    <value>//*[@ng-repeat]</value>
+  </data>
+  <data name="MyFiles_SelectFile_DropDownItem_FileName" xml:space="preserve">
+    <value>//td[1]</value>
+  </data>
+  <data name="MyFiles_SelectFile_DropDownItem_Status" xml:space="preserve">
+    <value>//td[2]</value>
+  </data>
+  <data name="MyFiles_SubscriptionModal_CancelButton" xml:space="preserve">
+    <value>//*[@uielement="MyFiles_SubscriptionModal_CancelButton"]</value>
+  </data>
+  <data name="MyFiles_SubscriptionModal_PurchaseButton" xml:space="preserve">
+    <value>//*[@uielement="MyFiles_SubscriptionModal_PurchaseButton"]</value>
+  </data>
+  <data name="MyFiles_Subscription_Modal" xml:space="preserve">
+    <value>//*[@ui-element="MatchInsights_Subscription_Modal"]</value>
+  </data>
+  <data name="MyPurchases_Page" xml:space="preserve">
+    <value>//*h2[contains(text(),'My Purchases')]</value>
+  </data>
+  <data name="MyPurchases_Table" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_Table"]</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_City" xml:space="preserve">
+    <value>//*[@placeholder="City"]</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_Country" xml:space="preserve">
+    <value>//*[@placeholder="Country"]</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_CreditScore" xml:space="preserve">
+    <value>//*[@name="credit-score"]</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_Latest" xml:space="preserve">
+    <value>//*[@name="latest"]</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_PurchaseDate_RangeEnd" xml:space="preserve">
+    <value>//*[@name="end"]</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_PurchaseDate_RangeStart" xml:space="preserve">
+    <value>//*[@name="start"]</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_Row" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableFilterRow"]</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_State" xml:space="preserve">
+    <value>//*[@placeholder="State/Province"]</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_Status" xml:space="preserve">
+    <value>//*[@name="status"]</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_Zip" xml:space="preserve">
+    <value>//*[@placeholder="Zip"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableRow"]</value>
+  </data>
+  <data name="MyPurchases_Table_Rows" xml:space="preserve">
+    <value>//*[@id="my-purchases-table"]/tbody[1]/tr</value>
+  </data>
+  <data name="MyPurchases_Table_Row_City" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_City"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_CompanyName" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_CompanyName"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_Country" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_Country"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_CreditScore" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_CreditScore"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_ExpirationStatus" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_PurchasedDate"]//*[@data-content]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_First" xml:space="preserve">
+    <value>//*[@id="my-purchases-table"]/tbody[1]/tr[1]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_Latest" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_Latest"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_PurchaseDate" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_PurchasedDate"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_State" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_StateProvince"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_Status" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_Status"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_StreetAddress" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_StreetAddress"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_TotalAlerts" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_TotalAlerts"]</value>
+  </data>
+  <data name="MyPurchases_Table_Row_Zip" xml:space="preserve">
+    <value>//*[@ui-element="MyPurchases_TableColumn_Zip"]</value>
+  </data>
+  <data name="My_Files_HighConfidence_Root" xml:space="preserve">
+    <value>//*[@id="highConfidenceMatch"]/mc-high-confidence/div</value>
+  </data>
+  <data name="My_Files_HighConfidence_Tab" xml:space="preserve">
+    <value>//*[@id="highConfidenceId"]</value>
+  </data>
+  <data name="My_Files_HighConfidence_Table" xml:space="preserve">
+    <value>//*[@id="highConfidenceMatch"]/mc-high-confidence/div/table</value>
+  </data>
+  <data name="My_Files_HighConfidence_Table_company_all" xml:space="preserve">
+    <value>//*[@id="highConfidenceMatch"]/mc-high-confidence/div/table/tbody/tr</value>
+  </data>
+  <data name="My_Files_LikelyMatch_Tab" xml:space="preserve">
+    <value>//*[@ui-element="My_Files_LikelyMatch_Tab"]</value>
+  </data>
+  <data name="My_Files_MatchInsights_Tab" xml:space="preserve">
+    <value>//*[@ui-element="My_Files_MatchInsights_Tab"]</value>
+  </data>
+  <data name="My_Files_NoMatch_Tab" xml:space="preserve">
+    <value>//*[@ui-element="My_Files_HighConfidence_Tab"]</value>
+  </data>
+  <data name="My_Files_Purchase_Premium_Monitoring" xml:space="preserve">
+    <value>//*[@ui-element="HighConfidence_PurchasePremiumMonitoring_Button"]</value>
+  </data>
+  <data name="My_Purchases_AlertIcon" xml:space="preserve">
+    <value>//*[@ui-element="Search_Directory_Compliance_Icon_Alerts"]</value>
+  </data>
+  <data name="Navigation_Admin" xml:space="preserve">
+    <value>//a[@ui-element='Navigation_AdminSection_AdminLink']/h5[text()=' Admin']</value>
+  </data>
+  <data name="Navigation_AdminSection_AdminDirectoryLink" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Admin')]/../../..//*[contains(text(),'Directory')]</value>
+  </data>
+  <data name="Navigation_AdminSection_CounterPartyLink" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Admin')]/../../..//*[contains(text(),'Counterparty')]</value>
+  </data>
+  <data name="Navigation_AdminSection_DataStewartQueueLink" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Admin')]/../../..//*[contains(text(),'Data Steward Queue')]</value>
+  </data>
+  <data name="Navigation_Admin_Search" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[@class='content-admin']//*[contains(text(),'Directory')]</value>
+  </data>
+  <data name="Navigation_CompanyProfile" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Company Profile')]</value>
+  </data>
+  <data name="Navigation_CompanyProfile_AccountDetails" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Company Profile')]/../../..//*[contains(text(),'Account Details')]</value>
+  </data>
+  <data name="Navigation_CompanyProfile_ManagePaymentAccounts" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Company Profile')]/../../..//*[contains(text(),'Manage Payment Account')]</value>
+  </data>
+  <data name="Navigation_CompanyProfile_Reporting" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Reporting')]</value>
+  </data>
+  <data name="Navigation_CompanyProfile_RolesEntitlments" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Company Profile')]/../../..//*[contains(text(),'Roles &amp; Entitlements')]</value>
+  </data>
+  <data name="Navigation_CompanyProfile_Users" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Company Profile')]/../../..//*[contains(text(),'Users')]</value>
+  </data>
+  <data name="Navigation_MyBuyers" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'My Buyers')]</value>
+  </data>
+  <data name="Navigation_MyBuyers_Buyers" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'My Buyers')]/../../..//*[@class='navigation-ul']//*[contains(text(),'Buyers')]</value>
+  </data>
+  <data name="Navigation_MyBuyers_Invitations" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'My Buyers')]/../../..//*[contains(text(),'Invitations')]</value>
+  </data>
+  <data name="Navigation_MyPurchases" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'My Purchases')]</value>
+  </data>
+  <data name="Navigation_MySuppliers" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'My Suppliers')]</value>
+  </data>
+  <data name="Navigation_MySuppliers_Invitations" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'My Suppliers')]/../../..//*[contains(text(),'Invitations')]</value>
+  </data>
+  <data name="Navigation_MySuppliers_Suppliers" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'My Suppliers')]/../../..//*[@class='navigation-ul']//*[contains(text(),'Suppliers')]</value>
+  </data>
+  <data name="Navigation_My_Files" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'My Files')]</value>
+  </data>
+  <data name="Navigation_NewRecordRequest" xml:space="preserve">
+    <value>//*[@ui-element="Navigation_NewRecordRequest"]</value>
+  </data>
+  <data name="Navigation_Subscriptions" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Subscriptions')]</value>
+  </data>
+  <data name="Navigation_Subscriptions_PaymentServices" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Subscriptions')]/../../..//*[contains(text(),'Payment Services')]</value>
+  </data>
+  <data name="Navigation_TrackDirectory" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Track Directory')]</value>
+  </data>
+  <data name="Navigation_Transactions" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Transactions')]</value>
+  </data>
+  <data name="Navigation_Transactions_InProgress" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Transactions')]/../../..//*[contains(text(),'In Progress')]</value>
+  </data>
+  <data name="Navigation_Transactions_Invoices" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Transactions')]/../../..//*[contains(text(),'Invoices')]</value>
+  </data>
+  <data name="Navigation_Transactions_PastPayments" xml:space="preserve">
+    <value>//div[@class='sidenavbar']//*[contains(text(),'Transactions')]/../../..//*[contains(text(),'Past Payments')]</value>
+  </data>
+  <data name="NewRecordRequest_CompanyFound_ValidationMessage" xml:space="preserve">
+    <value>//*[@class="validation-extra-info ng-binding"]</value>
+  </data>
+  <data name="NewRecordRequest_ConfirmModal" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-confirm-modal"]</value>
+  </data>
+  <data name="NewRecordRequest_ConfirmModal_Cancel" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-confirm-modal-cancel"]</value>
+  </data>
+  <data name="NewRecordRequest_ConfirmModal_Confirm" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-confirm-modal-orgidinput"]</value>
+  </data>
+  <data name="NewRecordRequest_ConfirmModal_OrgIdInput" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_ConfirmModal_OrgIdInput"]</value>
+  </data>
+  <data name="NewRecordRequest_DetailsModal" xml:space="preserve">
+    <value>//*[@ui-component="NewRecordRequest_DetailsModal"]</value>
+  </data>
+  <data name="NewRecordRequest_DetailsModal_Approve" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-details-modal-cancel"]</value>
+  </data>
+  <data name="NewRecordRequest_DetailsModal_Cancel" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-details-modal-cancel"]</value>
+  </data>
+  <data name="NewRecordRequest_DetailsModal_Reject" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-details-modal-approve"]</value>
+  </data>
+  <data name="NewRecordRequest_Modal_ConfirmRequest" xml:space="preserve">
+    <value>//*[@id="AdminInputSectionPill"]</value>
+  </data>
+  <data name="NewRecordRequest_Table" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-table"]</value>
+  </data>
+  <data name="NewRecordRequest_TableColumn_Date" xml:space="preserve">
+    <value>//*[ui-element="NewRecordRequest_TableColumn_Date"]</value>
+  </data>
+  <data name="NewRecordRequest_TableColumn_RecordId" xml:space="preserve">
+    <value>//*[ui-element="NewRecordRequest_TableRow_Link"]</value>
+  </data>
+  <data name="NewRecordRequest_TableColumn_State" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-table-column-state"]</value>
+  </data>
+  <data name="NewRecordRequest_TableErrorFound" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-table-errorfound"]</value>
+  </data>
+  <data name="NewRecordRequest_TableNoRecords" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-table-norecords"]</value>
+  </data>
+  <data name="NewRecordRequest_TableRow" xml:space="preserve">
+    <value>//*[ui-element="new-record-requests-table-row"]</value>
+  </data>
+  <data name="NewRecordRequest_TableRow_Link" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableRow_DetailsLink"]</value>
+  </data>
+  <data name="NewRegistrationPage_Address1" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.address1"]</value>
+  </data>
+  <data name="NewRegistrationPage_Address2" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.address2"]</value>
+  </data>
+  <data name="NewRegistrationPage_Branch" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.branch"]</value>
+  </data>
+  <data name="NewRegistrationPage_BusinessClassification" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.businessClassification"]</value>
+  </data>
+  <data name="NewRegistrationPage_City" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.city"]</value>
+  </data>
+  <data name="NewRegistrationPage_ComapanyPhoneType" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.phoneType1"]</value>
+  </data>
+  <data name="NewRegistrationPage_ComapanyPhoneType2" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.phoneType2"]</value>
+  </data>
+  <data name="NewRegistrationPage_ComapanyPhoneType3" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.phoneType3"]</value>
+  </data>
+  <data name="NewRegistrationPage_ComapanyURL" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.companyURL"]</value>
+  </data>
+  <data name="NewRegistrationPage_CompanyPhoneNumber" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.companyPhone1"]</value>
+  </data>
+  <data name="NewRegistrationPage_CompanyPhoneNumber2" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.companyPhone2"]</value>
+  </data>
+  <data name="NewRegistrationPage_CompanyPhoneNumber3" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.companyPhone3"]</value>
+  </data>
+  <data name="NewRegistrationPage_CompleteRegistration" xml:space="preserve">
+    <value>//*[contains(@ng-click,"submit()")]</value>
+  </data>
+  <data name="NewRegistrationPage_ContactPersonEmail" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.contactPersonEmail"]</value>
+  </data>
+  <data name="NewRegistrationPage_ContactPersonEmailConfirmation" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.contactPersonEmailConfirmation"]</value>
+  </data>
+  <data name="NewRegistrationPage_ContactPersonFirstName" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.contactPersonFirstName"]</value>
+  </data>
+  <data name="NewRegistrationPage_ContactPersonLastName" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.contactPersonLastName"]</value>
+  </data>
+  <data name="NewRegistrationPage_ContactPersonPhone" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.contactPersonPhone"]</value>
+  </data>
+  <data name="NewRegistrationPage_Contact_Information_ContinueButton" xml:space="preserve">
+    <value>//*[contains(@ng-click,"navigateToTerms")]</value>
+  </data>
+  <data name="NewRegistrationPage_ContinueButton" xml:space="preserve">
+    <value>//*[contains(@ng-click,"navigateToIndustryInfo")]</value>
+  </data>
+  <data name="NewRegistrationPage_Country" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.country"]</value>
+  </data>
+  <data name="NewRegistrationPage_EIN" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.ein"]</value>
+  </data>
+  <data name="NewRegistrationPage_Industry_Information_ContinueButton" xml:space="preserve">
+    <value>//*[contains(@ng-click,"navigateToContactInfo")]</value>
+  </data>
+  <data name="NewRegistrationPage_OtherCountryID" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.otherCountryID"]</value>
+  </data>
+  <data name="NewRegistrationPage_RegisteredBusinessName" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.registeredBusinessName"]</value>
+  </data>
+  <data name="NewRegistrationPage_SSN" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.ssn"]</value>
+  </data>
+  <data name="NewRegistrationPage_State" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.state.stateName"]</value>
+  </data>
+  <data name="NewRegistrationPage_TaxID" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.taxID"]</value>
+  </data>
+  <data name="NewRegistrationPage_TermsOfUse_Term1" xml:space="preserve">
+    <value>//*[@ng-model="termsOfUse.term1"]</value>
+  </data>
+  <data name="NewRegistrationPage_TermsOfUse_Term2" xml:space="preserve">
+    <value>//*[@ng-model="termsOfUse.term2"]</value>
+  </data>
+  <data name="NewRegistrationPage_TermsOfUse_Term3" xml:space="preserve">
+    <value>//*[@ng-model="termsOfUse.term3"]</value>
+  </data>
+  <data name="NewRegistrationPage_VAT" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.vat"]</value>
+  </data>
+  <data name="NewRegistrationPage_Zip" xml:space="preserve">
+    <value>//*[@ng-model="newOrganizationForQueue.zip"]</value>
+  </data>
+  <data name="Onbaording_Address1" xml:space="preserve">
+    <value>//*[@name="Address1"]</value>
+  </data>
+  <data name="Onbaording_Address2" xml:space="preserve">
+    <value>//*[@name="Address2"]</value>
+  </data>
+  <data name="Onbaording_Branch" xml:space="preserve">
+    <value>//*[@name="Branch"]</value>
+  </data>
+  <data name="Onbaording_BusinessClassification" xml:space="preserve">
+    <value>//*[@name="BusinessClassification"]</value>
+  </data>
+  <data name="Onbaording_CompanyBusinessDescription" xml:space="preserve">
+    <value>//*[@name="CompanyBusinessDescription"]</value>
+  </data>
+  <data name="Onbaording_CompanyNumber" xml:space="preserve">
+    <value>//*[@name="CompanyNumber"]</value>
+  </data>
+  <data name="Onbaording_CompanyURL" xml:space="preserve">
+    <value>//*[@name="CompanyURL"]</value>
+  </data>
+  <data name="Onbaording_ComplianceVendorID" xml:space="preserve">
+    <value>//*[@name="ComplianceVendorID"]</value>
+  </data>
+  <data name="Onbaording_ContactDetail_ContactFirstName" xml:space="preserve">
+    <value>//*[@name="ContactDetail.ContactFirstName"]</value>
+  </data>
+  <data name="Onbaording_ContactDetail_ContactLastName" xml:space="preserve">
+    <value>//*[@name="ContactDetail.ContactLastName"]</value>
+  </data>
+  <data name="Onbaording_ContactDetail_ContactPersonEmail" xml:space="preserve">
+    <value>//*[@name="ContactDetail.ContactPersonEmail"]</value>
+  </data>
+  <data name="Onbaording_ContactPersonPhone2" xml:space="preserve">
+    <value>//*[@name="ContactPersonPhone2"]</value>
+  </data>
+  <data name="Onbaording_ContactPersonPhone3" xml:space="preserve">
+    <value>//*[@name="ContactPersonPhone3"]</value>
+  </data>
+  <data name="Onbaording_Country" xml:space="preserve">
+    <value>//*[@name="Country"]</value>
+  </data>
+  <data name="Onbaording_CurrentAlternativeLegalName" xml:space="preserve">
+    <value>//*[@name="CurrentAlternativeLegalName"]</value>
+  </data>
+  <data name="Onbaording_DateOfCompanyRegistration" xml:space="preserve">
+    <value>//*[@name="DateOfCompanyRegistration"]</value>
+  </data>
+  <data name="Onbaording_DateOfStartingOperation" xml:space="preserve">
+    <value>//*[@name="DateOfStartingOperation"]</value>
+  </data>
+  <data name="Onbaording_EIN" xml:space="preserve">
+    <value>//*[@name="EIN"]</value>
+  </data>
+  <data name="Onbaording_FaxNumber" xml:space="preserve">
+    <value>//*[@name="FaxNumber"]</value>
+  </data>
+  <data name="Onbaording_IDFromBuyer" xml:space="preserve">
+    <value>//*[@name="IDFromBuyer"]</value>
+  </data>
+  <data name="Onbaording_IDFromNetwork" xml:space="preserve">
+    <value>//*[@name="IDFromNetwork"]</value>
+  </data>
+  <data name="Onbaording_IndustryCode" xml:space="preserve">
+    <value>//*[@name="IndustryCode"]</value>
+  </data>
+  <data name="Onbaording_IndustryDescription" xml:space="preserve">
+    <value>//*[@name="IndustryDescription"]</value>
+  </data>
+  <data name="Onbaording_OrganizationName" xml:space="preserve">
+    <value>//*[@name="OrganizationName"]</value>
+  </data>
+  <data name="Onbaording_PhoneNumber" xml:space="preserve">
+    <value>//*[@name="PhoneNumber"]</value>
+  </data>
+  <data name="Onbaording_PhoneType1" xml:space="preserve">
+    <value>//*[@name="PhoneType1"]</value>
+  </data>
+  <data name="Onbaording_PhoneType2" xml:space="preserve">
+    <value>//*[@name="PhoneType2"]</value>
+  </data>
+  <data name="Onbaording_PhoneType3" xml:space="preserve">
+    <value>//*[@name="PhoneType3"]</value>
+  </data>
+  <data name="Onbaording_RegisteredBusinessName" xml:space="preserve">
+    <value>//*[@name="RegisteredBusinessName"]</value>
+  </data>
+  <data name="Onbaording_RegistryUrl" xml:space="preserve">
+    <value>//*[@name="RegistryUrl"]</value>
+  </data>
+  <data name="Onbaording_SendInvite" xml:space="preserve">
+    <value>//*[contains(@ng-click,"sendInvite")]</value>
+  </data>
+  <data name="Onbaording_State" xml:space="preserve">
+    <value>//*[@name="State"]</value>
+  </data>
+  <data name="Onbaording_TaxCode" xml:space="preserve">
+    <value>//*[@name="TaxCode"]</value>
+  </data>
+  <data name="Onbaording_TypeOfOwnership" xml:space="preserve">
+    <value>//*[@name="TypeOfOwnership"]</value>
+  </data>
+  <data name="Onbaording_Zip" xml:space="preserve">
+    <value>//*[@name="Zip"]</value>
+  </data>
+  <data name="Onboarding_City" xml:space="preserve">
+    <value>//*[@name="City"]</value>
+  </data>
+  <data name="Onboarding_Reset_Button" xml:space="preserve">
+    <value>//button[@type='reset']</value>
+  </data>
+  <data name="Onboarding_Save_Button" xml:space="preserve">
+    <value>//button[@type='submit']</value>
+  </data>
+  <data name="Pagination_ControlSet" xml:space="preserve">
+    <value>//*[@ui-element="Pagination_ControlSet"]</value>
+  </data>
+  <data name="Pagination_Next" xml:space="preserve">
+    <value>//*[text()='Next']</value>
+  </data>
+  <data name="Pagination_PageNumbers" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Pagination_Previous" xml:space="preserve">
+    <value>//*[text()='Previous']</value>
+  </data>
+  <data name="PaymentServices_MakePayments" xml:space="preserve">
+    <value>//*[(contains(@class,"mpu-accord-sec") or contains(@class,"mp-accord-sec")) and not(contains(@class,"ng-hide"))]</value>
+  </data>
+  <data name="PaymentServices_MakePayments_SubscribeNotRequested_SubscribeButton" xml:space="preserve">
+    <value>//*[@data-ng-hide="IsSubscribeToMakePayments" and not(contains(@class,"ng-hide"))]//button</value>
+  </data>
+  <data name="PaymentServices_MakePayments_SubscribeRequested_SentMessage" xml:space="preserve">
+    <value>//*[@data-ng-show="IsSubscribeToMakePayments" and not(contains(@class,"ng-hide"))]</value>
+  </data>
+  <data name="PaymentServices_ReceivePayment" xml:space="preserve">
+    <value>//*[(contains(@class, "rpu-accord-sec") or contains(@class,"ps-accord-sec")) and not(contains(@class,"ng-hide"))]</value>
+  </data>
+  <data name="PaymentServices_ReceivePayments_SubscribeRequested_SentMessage" xml:space="preserve">
+    <value>//*[@data-ng-show="IsSubscribeToReceivePayments" and not(contains(@class,"ng-hide"))]</value>
+  </data>
+  <data name="PaymentServices_ReceivePayment_SubscribeNotRequested_SubscribeButton" xml:space="preserve">
+    <value>//*[@data-ng-hide="IsSubscribeToReceivePayments" and not(contains(@class,"ng-hide"))]//*[contains(text(),"Subscribe")]</value>
+  </data>
+  <data name="PrivacyNotice_IAgree" xml:space="preserve">
+    <value>//*[contains(text(),'I Agree')]</value>
+  </data>
+  <data name="PrivacyNotice_Term1" xml:space="preserve">
+    <value>//*[@ng-model="term1"]</value>
+  </data>
+  <data name="PrivacyNotice_Term2" xml:space="preserve">
+    <value>//*[@ng-model="term2"]</value>
+  </data>
+  <data name="PrivacyNotice_Term3" xml:space="preserve">
+    <value>//*[@ng-model="term3"]</value>
+  </data>
+  <data name="Purchases_Confirmation_Button" xml:space="preserve">
+    <value>//*[@ui-element="Confirmation_Dialog_Action"]</value>
+  </data>
+  <data name="QueuePage_Button_DownloadReportToCSV" xml:space="preserve">
+    <value>//*[@id="QueuePage_DownloadReportToCSV"]</value>
+  </data>
+  <data name="QueuePage_DownloadCSVWithRange" xml:space="preserve">
+    <value>//*[@id="QueuePage_DownloadCSVWithRange"]</value>
+  </data>
+  <data name="QueuePage_RootValidate" xml:space="preserve">
+    <value>//*[@ui-page="QueuePage"]</value>
+  </data>
+  <data name="QueuePage_Table_RequestFilterKey" xml:space="preserve">
+    <value>//*[@id='reqTypeFilterKey']</value>
+  </data>
+  <data name="QueuePage_Table_StateFilterKey" xml:space="preserve">
+    <value>//*[@id='stateFilterKey']</value>
+  </data>
+  <data name="QueuePage_Table_State_Select" xml:space="preserve">
+    <value>//*[@ng-model="t.queueStatus"]</value>
+  </data>
+  <data name="Queue_Table" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_Table"]</value>
+  </data>
+  <data name="Queue_Table_Column_Business_Name" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableColumn_CompanyName"]</value>
+  </data>
+  <data name="Queue_Table_Column_Receipt_Date" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableColumn_Date"]</value>
+  </data>
+  <data name="Queue_Table_Column_Request_Type" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableColumn_RequestType"]</value>
+  </data>
+  <data name="Queue_Table_Column_State" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableColumn_QueueState"]</value>
+  </data>
+  <data name="Queue_Table_Filter_Request_Type" xml:space="preserve">
+    <value>//*[@ng-model="filteredRequestType"]</value>
+  </data>
+  <data name="Queue_Table_Filter_State" xml:space="preserve">
+    <value>//*[@ng-model="filteredState"]</value>
+  </data>
+  <data name="Queue_Table_Header_Business_Name" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableHeader_CompanyName"]</value>
+  </data>
+  <data name="Queue_Table_Header_Receipt_Date" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableHeader_Date"]</value>
+  </data>
+  <data name="Queue_Table_Header_RequestTypeFilterDropdown" xml:space="preserve">
+    <value>//Select[@ng-model='filteredRequestType']/option</value>
+  </data>
+  <data name="Queue_Table_Header_Request_Type" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableHeader_RequestType"]</value>
+  </data>
+  <data name="Queue_Table_Header_Row" xml:space="preserve">
+    <value>//tr[contains(@ui-element, "NewRecordRequest_TableHeaderRow")]</value>
+  </data>
+  <data name="Queue_Table_Header_State" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableHeader_QueueState"]</value>
+  </data>
+  <data name="Queue_Table_Header_Updated_By" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableHeader_UpdatedBy"]</value>
+  </data>
+  <data name="Queue_Table_Header_Updated_Date" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableHeader_UpdatedDate"]</value>
+  </data>
+  <data name="Queue_Table_Row" xml:space="preserve">
+    <value>//tr[contains(@ui-element, "NewRecordRequest_TableRow")]</value>
+  </data>
+  <data name="Queue_Table_Updated_By" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableColumn_ModifiedByUser"]</value>
+  </data>
+  <data name="Queue_Table_Updated_Date" xml:space="preserve">
+    <value>//*[@ui-element="NewRecordRequest_TableColumn_ModifiedDate"]</value>
+  </data>
+  <data name="Register_New_Company_In_Track" xml:space="preserve">
+    <value>//a[contains(text(),'Register a new company in Track.')]</value>
+  </data>
+  <data name="RelationshipDetails_Edit" xml:space="preserve">
+    <value>//*[contains(@class, 'edit-link')]</value>
+  </data>
+  <data name="RelationshipDetails_Edit_SaveButton" xml:space="preserve">
+    <value>//*[contains(@data-ng-show,"is") and not(@class='ng-hide')]//*[contains(text(),'Save')]</value>
+  </data>
+  <data name="RelationshipDetails_RemitFromText" xml:space="preserve">
+    <value>//*[contains(@data-ng-show,"is") and not(@class='ng-hide')]//*[contains(@ng-show, 'relationshipData.remitFromId') and not(@class='ng-hide')]</value>
+  </data>
+  <data name="RelationshipDetails_RemitToText" xml:space="preserve">
+    <value>//*[contains(@data-ng-show,"is") and not(@class='ng-hide')]//*[contains(@ng-show, 'relationshipData.remitToId') and not(@class='ng-hide')]</value>
+  </data>
+  <data name="ReportingPage_Controller" xml:space="preserve">
+    <value>//*[@ng-controller="ReportsController"]</value>
+  </data>
+  <data name="ReportingPage_GenerateReportButton" xml:space="preserve">
+    <value>//button[@type="submit" and text()="Generate"]</value>
+  </data>
+  <data name="ReportingPage_Navigation" xml:space="preserve">
+    <value>//a/h5[Contains(text(),'Reporting')]</value>
+  </data>
+  <data name="ReportingPage_NoDataReportAlert" xml:space="preserve">
+    <value>//Strong[text()='No data found']</value>
+  </data>
+  <data name="ReportingPage_PayemntReportForBuyers" xml:space="preserve">
+    <value>//li/a[text()="Invoice Payment Report for Buyers"]</value>
+  </data>
+  <data name="ReportingPage_PayemntReportForSuppliers" xml:space="preserve">
+    <value>//li/a[text()="Invoice Payment Report for Suppliers"]</value>
+  </data>
+  <data name="SearchDirectory_CompanyNameInput" xml:space="preserve">
+    <value>//*[@ui-element="SearchDirectory_CompanyNameInput"]</value>
+    <comment>SearchDirectory_CompanyNameInput</comment>
+  </data>
+  <data name="SearchDirectory_InviteAsBuyerButton" xml:space="preserve">
+    <value>//*[contains(text(),'Invite as Buyer')]</value>
+  </data>
+  <data name="SearchDirectory_InviteAsSupplierButton" xml:space="preserve">
+    <value>//*[contains(text(),'Invite as Supplier')]</value>
+  </data>
+  <data name="SearchDirectory_SearchButton" xml:space="preserve">
+    <value>//*[@id="submitSearchBtn"]</value>
+  </data>
+  <data name="SearchDirectory_TableColumn_CompanyName" xml:space="preserve">
+    <value>//tr[contains(@ng-repeat,'organization')]//*[contains(@class,"org-info-link")]</value>
+  </data>
+  <data name="SearchDirectory_TableColumn_Selected" xml:space="preserve">
+    <value>//tr[contains(@ng-repeat,'organization')]//*[@data-ng-model="organization.selected"]</value>
+  </data>
+  <data name="SearchDirectory_TableRows" xml:space="preserve">
+    <value>//tr[contains(@ng-repeat,'organization')]</value>
+  </data>
+  <data name="SupplierInvitations_Pending_Column_Accept" xml:space="preserve">
+    <value>//*[contains(text(), "Accept")]</value>
+  </data>
+  <data name="SupplierInvitations_Pending_Column_CompanyName" xml:space="preserve">
+    <value>//*[contains(@class, "org-info-link")]</value>
+  </data>
+  <data name="SupplierInvitations_Pending_Column_Reject" xml:space="preserve">
+    <value>//*[contains(text(), "Reject")]</value>
+  </data>
+  <data name="SupplierInvitations_Pending_Rows" xml:space="preserve">
+    <value>//*[@id='pending_panel_received']//tr[contains(@ng-repeat,"invitationsReceived")]</value>
+  </data>
+  <data name="SupplierInvitations_Sent_Rows" xml:space="preserve">
+    <value>//*[@id='pending_panel']//tr[contains(@ng-repeat,"invitations")]</value>
+  </data>
+  <data name="TermsAndConditions_IAgree" xml:space="preserve">
+    <value>//*[contains(text(),'I Agree')]</value>
+  </data>
+  <data name="TermsAndConditions_Term1" xml:space="preserve">
+    <value>//*[@ng-model="term1"]</value>
+  </data>
+  <data name="TermsAndConditions_Term2" xml:space="preserve">
+    <value>//*[@ng-model="term2"]</value>
+  </data>
+  <data name="TermsAndConditions_Term3" xml:space="preserve">
+    <value>//*[@ng-model="term3"]</value>
+  </data>
+  <data name="UserPage_RejectChange_Modal_CancelRejectionButton" xml:space="preserve">
+    <value>//*[@class="modal-footer"]//*[@data-dismiss="modal"]</value>
+  </data>
+  <data name="UserPage_RejectChange_Modal_CancelRejectionButtonTopCorner" xml:space="preserve">
+    <value>//*[@class="modal-header"]//*[@data-dismiss="modal"]</value>
+  </data>
+  <data name="UserPage_RejectChange_Modal_InputText" xml:space="preserve">
+    <value>//*[@ng-model="rejectionReason"]</value>
+  </data>
+  <data name="UserPage_RejectChange_Modal_ModalTitle" xml:space="preserve">
+    <value>//*[contains(@class, "modal-title")]</value>
+  </data>
+  <data name="UserPage_RejectChange_Modal_RejectChangesButton" xml:space="preserve">
+    <value>//*[@class="modal-footer"]//*[contains(text(),"Reject Changes")]</value>
+  </data>
+  <data name="UserPage_RejectChange_PopupModal" xml:space="preserve">
+    <value>//*[@id="rejectChangeModal"]//*[@class="modal-dialog"]</value>
+  </data>
+  <data name="UserPage_RolesPopup" xml:space="preserve">
+    <value>//*[@class='multiselect-userrole']</value>
+  </data>
+  <data name="UserPage_RolesPopup_Approve" xml:space="preserve">
+    <value>//*[text()='Approve']</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection" xml:space="preserve">
+    <value>//*[contains(@ng-repeat,"UserRoles.allCategories")]</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_CategoryLabel" xml:space="preserve">
+    <value>//*[contains(@class,"role-sec-hdr")]</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection" xml:space="preserve">
+    <value>//*[contains(@ng-repeat,"UserRoles.allRoles")]</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection_Changed" xml:space="preserve">
+    <value>//*[@id="apChkList2"]</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection_Changed_Checkbox" xml:space="preserve">
+    <value>//*[@id="apChkList2"]//input[@type="checkbox" ]</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection_Changed_Label" xml:space="preserve">
+    <value>//*[@id="apChkList2"]/input[@type="checkbox" ]/following-sibling::label</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection_Checkbox" xml:space="preserve">
+    <value>//*[@ui-element='UsersPage_UserTable_BodyRole_RolesSpecifiedNameCheckbox']</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection_Label" xml:space="preserve">
+    <value>>//*[@ui-element='UsersPage_UserTable_BodyRole_RolesSpecifiedName']</value>
+  </data>
+  <data name="UserPage_RolesPopup_Close" xml:space="preserve">
+    <value>//*[text()='Close']</value>
+  </data>
+  <data name="UserPage_RolesPopup_Reject" xml:space="preserve">
+    <value>//*[text()='Reject']</value>
+  </data>
+  <data name="UserPage_RolesPopup_Save" xml:space="preserve">
+    <value>//*[contains(text(),'Save')]</value>
+  </data>
+  <data name="UserPage_Table_Column_Email" xml:space="preserve">
+    <value>//td[2]</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="UserPage_Table_Column_Name" xml:space="preserve">
+    <value>//td[1]</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="UserPage_Table_Column_Roles" xml:space="preserve">
+    <value>//td[3]</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="UserPage_Table_Column_Roles_WaitingApprovalFlag" xml:space="preserve">
+    <value>//i[contains(@title,"Awaiting role assignment approval") and @ng-show="true"]</value>
+  </data>
+  <data name="UserPage_Table_UserRow" xml:space="preserve">
+    <value>//tr[contains(@ng-repeat, "UserRoles.userRolesData")]</value>
+  </data>
+  <data name="NewRegistrationPage_ContactTab" xml:space="preserve">
+    <value>//*[@id="ContactSectionPill"]</value>
+  </data>
+  <data name="NewRegistrationPage_TOUPNTab" xml:space="preserve">
+    <value>//*[@id="TermsAndPNPill"]</value>
+  </data>
+</root>

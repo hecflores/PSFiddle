@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard1.3</TargetFrameworks>
+    <IncludeBuildOutput>true</IncludeBuildOutput>
+  </PropertyGroup>
+
+  
+  <PropertyGroup>
+    <PackageId>PSFiddle.Analyzers</PackageId>
+    <PackageVersion>1.0.0.5</PackageVersion>
+    <Product>PSFiddle.Analyzers</Product>
+    <Description>Custom Analyzers for UI and Client APIs</Description>
+    <Copyright></Copyright>
+    <Summary>Custom Analyzers for UI and Client APIs</Summary>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Title>PSFiddle.Analyzers</Title>
+    <PackageId>PSFiddle.Analyzers</PackageId>
+	<GenerateDocumentationFile>false</GenerateDocumentationFile>    
+    <RootNamespace>PSFiddle.Analyzers</RootNamespace>
+    <AssemblyName>PSFiddle.Analyzers</AssemblyName>
+    <PackageTags>netcore netframework analyzer</PackageTags>
+  </PropertyGroup>
+
+  
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs" DesignTime="True" AutoGen="True" DependentUpon="Resources.resx" />
+    <EmbeddedResource Update="Resources.resx" Generator="ResXFileCodeGenerator" LastGenOutput="Resources.Designer.cs" />
+  </ItemGroup>
+
+  <Target Name="CopyUtilityScriptToProject" BeforeTargets="Build">
+  
+  </Target>
+  
+  <!-- - - - - - - - - - - PackageReferences (Default) - - - - - - - - - - -->
+  <ItemGroup>
+	<PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="2.6.1" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="2.9.0" PrivateAssets="all" />
+    <PackageReference Update="NETStandard.Library" PrivateAssets="all" />
+  </ItemGroup>
+  
+  <!-- - - - - - - - - - - PackageReferences (Netcore 2.0) - - - - - - - - - - -->
+  <ItemGroup>
+	<None Update="tools\*.ps1" CopyToOutputDirectory="Always" Pack="true" PackagePath="" />
+    <None Include="$(OutputPath)\$(TargetFrameworks)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+  </ItemGroup>
+  
+  <!-- - - - - - - - - Defined Constants (Netcore 2.0) - - - - - - - - - -->
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netcoreapp2.0'">
+	<DefineConstants>NETCORE</DefineConstants>
+  </PropertyGroup>
+  
+  
+  
+  
+</Project>

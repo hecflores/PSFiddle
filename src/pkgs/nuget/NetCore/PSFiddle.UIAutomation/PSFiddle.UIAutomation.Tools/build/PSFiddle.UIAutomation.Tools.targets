@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project>
+
+  
+  <PropertyGroup Condition=" '$(MetisToolsProperties)' != 'true'" >
+    <MetisToolsToolsPath>$(MSBuildThisFileDirectory)..\..\tools\</MetisToolsToolsPath>
+    <MetisToolsProperties>true</MetisToolsProperties>
+
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildProjectFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+
+  <!-- App Config Transform - Secrets -->
+  <Target Name="Secret_App_config_AfterCompile" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <OriginalAppConfig>$(MSBuildProjectDirectory)/$(OutputPath)$(TargetFileName).config</OriginalAppConfig>
+      <TransformAppConfig>$(MSBuildProjectDirectory)/App.config.secret</TransformAppConfig>
+      <Message>Transforming Secret App Config</Message>
+      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+      <AppConfigTransformCode>&amp;'$(AppConfigTransformScript)' '$(OriginalAppConfig)' '$(TransformAppConfig)'</AppConfigTransformCode>
+    </PropertyGroup>
+
+    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { $(AppConfigTransformCode) } &quot;"  />
+  </Target>
+  
+  <!-- App Config Transform - Configuration -->
+  <Target Name="App_config_AfterCompile" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <OriginalAppConfig>$(MSBuildProjectDirectory)/$(OutputPath)$(TargetFileName).config</OriginalAppConfig>
+      <TransformAppConfig>$(MSBuildProjectDirectory)/App.$(Configuration).config</TransformAppConfig>
+      <Message>Transforming App Config - Configuration $(Configuration)</Message>
+      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+      <AppConfigTransformCode>&amp;'$(AppConfigTransformScript)' '$(OriginalAppConfig)' '$(TransformAppConfig)'</AppConfigTransformCode>
+
+      <TransformAppConfig Condition="Exists('$(MSBuildProjectDirectory)/App.$(Configuration).config.user')">$(MSBuildProjectDirectory)/App.$(Configuration).config.user</TransformAppConfig>
+    </PropertyGroup>
+
+    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { $(AppConfigTransformCode) } &quot;"  />
+  </Target>
+
+  <!-- App Config Transform - Configuration|Secrets -->
+  <Target Name="Secret_App_config_AfterCompile" AfterTargets="AfterBuild">
+    <PropertyGroup>
+      <OriginalAppConfig>$(MSBuildProjectDirectory)/$(OutputPath)$(TargetFileName).config</OriginalAppConfig>
+      <TransformAppConfig>$(MSBuildProjectDirectory)/App.$(Configuration).config.secret</TransformAppConfig>
+      <Message>Transforming Secret App Config - Configuration $(Configuration)</Message>
+      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+      <AppConfigTransformCode>&amp;'$(AppConfigTransformScript)' '$(OriginalAppConfig)' '$(TransformAppConfig)'</AppConfigTransformCode>
+    </PropertyGroup>
+
+    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { $(AppConfigTransformCode) } &quot;"  />
+  </Target>
+  
+  <!-- Clean Feature Files -->
+  <Target Name="CleanFeatureFiles" BeforeTargets="BeforeClean"  Condition="'$(SkipFeatureFileCleanup)' != 'true'">
+    <PropertyGroup>
+      <Message>Cleaning Feature Files</Message>
+      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+      <CleanFeatureFilesCode>&amp;'$(CleanFeatureFilesScript)' '$(MSBuildProjectDirectory)' </CleanFeatureFilesCode>
+    </PropertyGroup>
+    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { $(CleanFeatureFilesCode) } &quot;"  />
+
+    <!--
+      net.sdk support: globbing does not support including files which are dynamically generated inside targets, we have to manually update compile items
+    -->
+    <ItemGroup Condition="'$(EnableDefaultItems)' == 'true' and '$(EnableDefaultCompileItems)' == 'true'">
+      <!-- if this is the first time generation of codebehind files, we have to manually add them as compile items -->
+      <Compile Remove="**/*.feature.cs"/>
+    </ItemGroup>
+    
+  </Target>
+
+  <!-- Sql Code Files -->
+  <Target Name="GenerateSQLCodeFiles" BeforeTargets="BeforeBuild" Condition="'$(SkipSQLCodeGeneration)' != 'true'">
+    <PropertyGroup>
+      <Message>Generating Sql Files Classes</Message>
+      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+      <SQLCodeScriptCode>&amp;'$(SQLCodeScript)' '$(MSBuildProjectDirectory)' </SQLCodeScriptCode>
+    </PropertyGroup>
+    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { $(SQLCodeScriptCode) } &quot;"  />
+
+    <!--
+      net.sdk support: globbing does not support including files which are dynamically generated inside targets, we have to manually update compile items
+    -->
+    <ItemGroup Condition="'$(EnableDefaultItems)' == 'true' and '$(EnableDefaultCompileItems)' == 'true'">
+
+      <!-- if this is the first time generation of codebehind files, we have to manually add them as compile items -->
+      <Compile Include="**/*.sql.cs"
+               Exclude="@(Compile)"/>
+
+    </ItemGroup>
+  </Target>
+
+  <!-- Powershell Code Files -->
+  <Target Name="GeneratePS1CodeFiles" BeforeTargets="BeforeBuild" Condition="'$(SkipPS1CodeGeneration)' != 'true'" >
+    <PropertyGroup>
+      <Message>Generating PS1 Files Classes</Message>
+      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+      <PS1CodeScriptCode>&amp;'$(PS1CodeScript)' '$(MSBuildProjectDirectory)' </PS1CodeScriptCode>
+    </PropertyGroup>
+    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { $(PS1CodeScriptCode) } &quot;"  />
+
+    <!--
+      net.sdk support: globbing does not support including files which are dynamically generated inside targets, we have to manually update compile items
+    -->
+    <ItemGroup Condition="'$(EnableDefaultItems)' == 'true' and '$(EnableDefaultCompileItems)' == 'true'">
+
+      <!-- if this is the first time generation of codebehind files, we have to manually add them as compile items -->
+      <Compile Include="**/*.ps1.cs"
+               Exclude="@(Compile)"/>
+
+    </ItemGroup>
+  </Target>
+  
+  <!-- Update Feature Files -->
+  <Target Name="UpdateFeatureFiles" BeforeTargets="BeforeBuild" Condition=" '$(SpecFlow_SkipMsbuildFeatureFileGeneration)' == 'false' ">
+    <Error Text="SpecFlow is required to be installed" Condition=" '$(PkgSpecFlow)' == ''"/>
+
+    <PropertyGroup>
+      <Message>Generate Feature Files</Message>
+      <SpecFlowExeFile Condition=" '$(PkgSpecFlow)' != ''">$(PkgSpecFlow)\tools\specflow.exe</SpecFlowExeFile>
+      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+      <LocalScriptCode>$(LocalScriptCode);[Environment]::SetEnvironmentVariable('PkgSpecFlow_SyncVSTS_SpecFlowPlugin','$(PkgSpecFlow_SyncVSTS_SpecFlowPlugin)','Process')</LocalScriptCode>
+      <LocalScriptCode>$(LocalScriptCode);[Environment]::SetEnvironmentVariable('PkgSpecFlow_SharedStepFeature_SpecFlowPlugin','$(PkgSpecFlow_SharedStepFeature_SpecFlowPlugin)','Process')</LocalScriptCode>
+      <LocalScriptCode>$(LocalScriptCode);pushd '$(MSBuildProjectDirectory)'; &amp;'$(SpecFlowExeFile)' GenerateAll -p $(MSBuildProjectFile) -f true -v true; popd</LocalScriptCode>
+      
+    </PropertyGroup>
+    
+    <Error Text="SpecFlow.exe was not found" Condition="!Exists('$(SpecFlowExeFile)')"/>
+    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { $(LocalScriptCode) } &quot;" />
+
+
+    <!--
+      net.sdk support: globbing does not support including files which are dynamically generated inside targets, we have to manually update compile items
+    -->
+    <ItemGroup Condition="'$(EnableDefaultItems)' == 'true' and '$(EnableDefaultCompileItems)' == 'true'">
+
+      <!-- if this is the first time generation of codebehind files, we have to manually add them as compile items -->
+      <Compile Include="**/*.feature.cs"
+               Exclude="@(Compile)"/>
+
+    </ItemGroup>
+  </Target>
+
+
+  <!-- Install Powershell Modules -->
+  <Target Name="InstallPowershellModules" BeforeTargets="BeforeBuild" Condition="'$(BUILD_BUILDID)' == '' and '$(SkipInstallingMetisPowershellModule)' != 'true' " >
+    <PropertyGroup>
+      <Message>Install Metis Powershell Modules</Message>
+      <PowerShellExe Condition=" '$(PowerShellExe)'=='' ">%WINDIR%\System32\WindowsPowerShell\v1.0\powershell.exe</PowerShellExe>
+      <InstallModulesCode>&amp;'$(InstallModulesScript)' '$(MetisPackagePath)' '$(MSBuildProjectFullPath)' </InstallModulesCode>
+    </PropertyGroup>
+    <Exec Command="$(PowerShellExe) -NonInteractive -executionpolicy Unrestricted -command &quot;&amp; { $(InstallModulesCode) } &quot;"  />
+  </Target>
+  
+  <!-- Force Generations -->
+  <PropertyGroup>
+    <CleanDependsOn>
+      ForceMsbuildGenertions;
+      $(CleanDependsOn)
+    </CleanDependsOn>
+    <RebuildDependsOn>
+      ForceMsbuildGenertions;
+      $(RebuildDependsOn)
+    </RebuildDependsOn>
+  </PropertyGroup>
+
+  <Target Name="ForceMsbuildGenertions">
+    <PropertyGroup>
+      <SpecFlow_SkipMsbuildFeatureFileGeneration>false</SpecFlow_SkipMsbuildFeatureFileGeneration>
+    </PropertyGroup>
+  </Target>
+  
+</Project>

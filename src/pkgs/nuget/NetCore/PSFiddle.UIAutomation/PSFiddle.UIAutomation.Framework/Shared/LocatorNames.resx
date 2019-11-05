@@ -1,0 +1,1366 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountDetailsPage_CompanyDetailsHeader" xml:space="preserve">
+    <value>Account Details Page - Company Details Header</value>
+  </data>
+  <data name="AdminSearchDirectory_ColumnAddress" xml:space="preserve">
+    <value>Admin Search Directory Results - Table Column (Address)</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="AdminSearchDirectory_ColumnCity" xml:space="preserve">
+    <value>Admin Search Directory Results - Table Column (City)</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="AdminSearchDirectory_ColumnCompanyName" xml:space="preserve">
+    <value>Admin Search Directory Results - Table Column (Company Name)</value>
+  </data>
+  <data name="AdminSearchDirectory_ColumnCountry" xml:space="preserve">
+    <value>Admin Search Directory Results - Table Column (Country)</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="AdminSearchDirectory_ColumnViewAs" xml:space="preserve">
+    <value>Admin Search Directory Results - Table Column (View As)</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="AdminSearchDirectory_RealTimeSearchText" xml:space="preserve">
+    <value>Admin Search Directory Results - Table Quick Search</value>
+  </data>
+  <data name="AdminSearchDirectory_Row" xml:space="preserve">
+    <value>Admin Search Directory Results - Table Row</value>
+  </data>
+  <data name="AdminSearchDirectory_SearchButton" xml:space="preserve">
+    <value>Admin Search Directory - Search Button</value>
+  </data>
+  <data name="AdminSearchDirectory_SearchText" xml:space="preserve">
+    <value>Admin Search Directory - Search Textbox</value>
+  </data>
+  <data name="AdminSearchDirectory_StopViewAs" xml:space="preserve">
+    <value>Admin Search Directory - Stop View As</value>
+  </data>
+  <data name="AdminSearchDirectory_Table" xml:space="preserve">
+    <value>Admin Search Directory Results - Table</value>
+  </data>
+  <data name="AdminSearchDirectory_ViewAsModal" xml:space="preserve">
+    <value>Admin Search Directory - Modal</value>
+  </data>
+  <data name="AdminSearchDirectory_ViewAsModal_Cancel" xml:space="preserve">
+    <value>Admin Search Directory - Modal (Cancel)</value>
+  </data>
+  <data name="AdminSearchDirectory_ViewAsModal_CancelTopRight" xml:space="preserve">
+    <value>Admin Search Directory - Modal (Cancel - Top Right)</value>
+  </data>
+  <data name="AdminSearchDirectory_ViewAsModal_Confirm" xml:space="preserve">
+    <value>Admin Search Directory - Modal (Confirm)</value>
+  </data>
+  <data name="Admin_TrackDirectory_RegisterCompany" xml:space="preserve">
+    <value>Admin Directory - Register Company</value>
+  </data>
+  <data name="Advanced_Search_Company_Name" xml:space="preserve">
+    <value>Advanced Search - Company Name</value>
+  </data>
+  <data name="Advanced_Search_Search_Button" xml:space="preserve">
+    <value>Advanced Directory - Search Button</value>
+  </data>
+  <data name="Advanced_Search_Table_Organization_Company_Name_Column" xml:space="preserve">
+    <value>Advanced Search Table - Column(Company Name)</value>
+  </data>
+  <data name="Advanced_Search_Table_Organization_Is_Selected_Column" xml:space="preserve">
+    <value>Advanced Search Table - Column(Is Selected)</value>
+  </data>
+  <data name="Advanced_Search_Toggle" xml:space="preserve">
+    <value>Advanced Search Toggle</value>
+  </data>
+  <data name="AliasAddress_AddAlias_Checkbox_C6" xml:space="preserve">
+    <value>Alias Address - Add Alias C6 (Checkbox)</value>
+  </data>
+  <data name="AliasAddress_AddAlias_Checkbox_Counterparty" xml:space="preserve">
+    <value>Alias Address - Add Alias Counterparty (Checkbox)</value>
+  </data>
+  <data name="AliasAddress_Addressline1_C6" xml:space="preserve">
+    <value>Alias Address - Address line1</value>
+  </data>
+  <data name="AliasAddress_Addressline1_Counterparty" xml:space="preserve">
+    <value>Alias Address - Address line1</value>
+  </data>
+  <data name="AliasAddress_Addressline2_C6" xml:space="preserve">
+    <value>Alias Address - Address line2</value>
+  </data>
+  <data name="AliasAddress_Addressline2_Counterparty" xml:space="preserve">
+    <value>Alias Address - Address line2</value>
+  </data>
+  <data name="AliasAddress_City_C6" xml:space="preserve">
+    <value>Alias Address - City</value>
+  </data>
+  <data name="AliasAddress_City_Counterparty" xml:space="preserve">
+    <value>Alias Address - City</value>
+  </data>
+  <data name="AliasAddress_Country_C6" xml:space="preserve">
+    <value>Alias Address - Country</value>
+  </data>
+  <data name="AliasAddress_Country_Counterparty" xml:space="preserve">
+    <value>Alias Address - Country</value>
+  </data>
+  <data name="AliasAddress_SourceID_C6" xml:space="preserve">
+    <value>Alias Address - SourceID - C6</value>
+  </data>
+  <data name="AliasAddress_SourceID_Counterparty" xml:space="preserve">
+    <value>AliasAddress - SourceID - Counterparty</value>
+  </data>
+  <data name="AliasAddress_State_C6" xml:space="preserve">
+    <value>Alias Address - State</value>
+  </data>
+  <data name="AliasAddress_State_Counterparty" xml:space="preserve">
+    <value>Alias Address - State</value>
+  </data>
+  <data name="AliasAddress_Zip_C6" xml:space="preserve">
+    <value>Alias Address - Zip</value>
+  </data>
+  <data name="AliasAddress_Zip_Counterparty" xml:space="preserve">
+    <value>AliasAddress - Zip</value>
+  </data>
+  <data name="Azure_Login_UserAnotherAccount" xml:space="preserve">
+    <value>Azure Login - Use Another Account</value>
+  </data>
+  <data name="button_c6_Confirm" xml:space="preserve">
+    <value>C6 No Match- Confirmation Dialog Continue Button</value>
+  </data>
+  <data name="button_c6_Save" xml:space="preserve">
+    <value>C6 No Match- Save Button</value>
+  </data>
+  <data name="BuyerInvitations_Pending_Column_Accept" xml:space="preserve">
+    <value>Buyer Invitations - Pending Column (Accept)</value>
+  </data>
+  <data name="BuyerInvitations_Pending_Column_CompanyName" xml:space="preserve">
+    <value>Buyer Invitations - Pending Column (Company Name)</value>
+  </data>
+  <data name="BuyerInvitations_Pending_Column_Reject" xml:space="preserve">
+    <value>Buyer Invitations - Pending Column (Reject)</value>
+  </data>
+  <data name="BuyerInvitations_Pending_Rows" xml:space="preserve">
+    <value>Buyer Invitations - Pending (Rows)</value>
+  </data>
+  <data name="BuyerInvitations_Sent_Rows" xml:space="preserve">
+    <value>Buyer Invitations - Sent(Rows)</value>
+  </data>
+  <data name="C6NoMatch_AliasAddressWindow_Add1" xml:space="preserve">
+    <value>C6 No Match Modal Form - Alias Address Display Window: Address 1</value>
+  </data>
+  <data name="C6NoMatch_AliasAddressWindow_Add2" xml:space="preserve">
+    <value>C6 No Match Modal Form - Alias Address Display Window: Address 2</value>
+  </data>
+  <data name="C6NoMatch_AliasAddressWindow_City" xml:space="preserve">
+    <value>C6 No Match Modal Form - Alias Address Display Window: City</value>
+  </data>
+  <data name="C6NoMatch_AliasAddressWindow_State" xml:space="preserve">
+    <value>C6 No Match Modal Form - Alias Address Display Window: State</value>
+  </data>
+  <data name="C6NoMatch_AliasAddressWindow_Zip" xml:space="preserve">
+    <value>C6 No Match Modal Form - Alias Address Display Window: Zip</value>
+  </data>
+  <data name="C6NoMatch_AliasAddress_CheckBox" xml:space="preserve">
+    <value>C6 No Match Modal Form - Alias Address Check Box</value>
+  </data>
+  <data name="C6NoMatch_AliasAddress_DisplayWindow" xml:space="preserve">
+    <value>C6 No Match Modal Form - Alias Address Display Window</value>
+  </data>
+  <data name="C6NoMatch_Close_Button" xml:space="preserve">
+    <value>C6 No Match Modal: Close Button</value>
+  </data>
+  <data name="C6NoMatch_CompanyFound_ValidationMessage" xml:space="preserve">
+    <value>C6 No Match Modal Form - Company Found: Validation Message</value>
+  </data>
+  <data name="C6NoMatch_Details_Modal" xml:space="preserve">
+    <value>C6 No Match - Details Modal</value>
+  </data>
+  <data name="C6NoMatch_Detail_Address1" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Address 1</value>
+  </data>
+  <data name="C6NoMatch_Detail_Address2" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Address 2</value>
+  </data>
+  <data name="C6NoMatch_Detail_City" xml:space="preserve">
+    <value>C6 No Match Modal Detail - City</value>
+  </data>
+  <data name="C6NoMatch_Detail_CompanyID" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Company ID</value>
+  </data>
+  <data name="C6NoMatch_Detail_CompanyName" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Company Name</value>
+  </data>
+  <data name="C6NoMatch_Detail_CompanyPhone" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Company Phone</value>
+  </data>
+  <data name="C6NoMatch_Detail_CompanyURL" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Company URL</value>
+  </data>
+  <data name="C6NoMatch_Detail_Country" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Country</value>
+  </data>
+  <data name="C6NoMatch_Detail_Details_Section" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Details Section</value>
+  </data>
+  <data name="C6NoMatch_Detail_Form_Section" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Form Section</value>
+  </data>
+  <data name="C6NoMatch_Detail_RequestID" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Request ID</value>
+  </data>
+  <data name="C6NoMatch_Detail_State" xml:space="preserve">
+    <value>C6 No Match Modal Detail - State</value>
+  </data>
+  <data name="C6NoMatch_Detail_Zip" xml:space="preserve">
+    <value>C6 No Match Modal Detail - Zip</value>
+  </data>
+  <data name="C6NoMatch_Disposition_Dropdown" xml:space="preserve">
+    <value>C6 No Match Modal Form - Disposition Dropdown</value>
+  </data>
+  <data name="C6NoMatch_NoCompanyFound_ValidationMessage" xml:space="preserve">
+    <value>C6 No Match Modal Form - No Company Found: Validation Message</value>
+  </data>
+  <data name="C6NoMatch_Save_Button" xml:space="preserve">
+    <value>C6 No Match Modal Form -Save Button</value>
+  </data>
+  <data name="C6NoMatch_SourceId_Input" xml:space="preserve">
+    <value>C6 No Match Modal Form - Source Id Input</value>
+  </data>
+  <data name="C6NoMatch_Source_DropDown" xml:space="preserve">
+    <value>C6 No Match Modal Form - Source Dropdown</value>
+  </data>
+  <data name="C6NoMatch_TrackId_Input" xml:space="preserve">
+    <value>New Record Request Page - Track Id Input</value>
+  </data>
+  <data name="C6NoMatch_ValidateOverwrite_CancelButton" xml:space="preserve">
+    <value>C6 No Match Confirmation Modal: Cancel Button</value>
+  </data>
+  <data name="C6NoMatch_ValidateOverwrite_ConfirmationModal" xml:space="preserve">
+    <value>C6 No Match Modal Confirmation Modal - Validation Overwrite</value>
+  </data>
+  <data name="C6NoMatch_ValidateOverwrite_ContinueButton" xml:space="preserve">
+    <value>C6 No Match Modal Confirmation Modal - Continue Button</value>
+  </data>
+  <data name="C6NoMatch_ValidatingCompany_ValidationMessage" xml:space="preserve">
+    <value>C6 No Match Modal Form - Validating Company: Validation Message</value>
+  </data>
+  <data name="ComplianceLinkingAcceptance_Continue" xml:space="preserve">
+    <value>ComplianceLinkingAcceptance - ConfirmationModal - Continue</value>
+  </data>
+  <data name="Compliance_And_Media_Edit_Compliance_Linkage" xml:space="preserve">
+    <value>Compliance And Media - Edit Compliance Linkage</value>
+  </data>
+  <data name="Confirmation_Dialog_Action" xml:space="preserve">
+    <value>UnPurchase Confirmation button</value>
+  </data>
+  <data name="Confirmation_Dialog_Close" xml:space="preserve">
+    <value>Confirmation Dialog Close</value>
+  </data>
+  <data name="Confirmation_Dialog_Root" xml:space="preserve">
+    <value>Purchase Confirmation Root</value>
+  </data>
+  <data name="CounterPartyFilePopup" xml:space="preserve">
+    <value>Counterparty File Popup</value>
+  </data>
+  <data name="CounterPartyFilePopup_AddressLine1" xml:space="preserve">
+    <value>Counter Party No Match Modal - Address 1</value>
+  </data>
+  <data name="CounterPartyFilePopup_AddressLine2" xml:space="preserve">
+    <value>Counter Party No Match Modal - Address 2</value>
+  </data>
+  <data name="CounterPartyFilePopup_AddressLine3" xml:space="preserve">
+    <value>Counter Party No Match Modal - Address 3</value>
+  </data>
+  <data name="CounterPartyFilePopup_Button_Save" xml:space="preserve">
+    <value>Counter Party No Match Modal - Save Button</value>
+  </data>
+  <data name="CounterPartyFilePopup_CheckBox_AddAlias" xml:space="preserve">
+    <value>Counter Party No Match Modal - Add Alias Check Box</value>
+  </data>
+  <data name="CounterPartyFilePopup_City" xml:space="preserve">
+    <value>Counter Party No Match Modal - City</value>
+  </data>
+  <data name="CounterPartyFilePopup_City3" xml:space="preserve">
+    <value>Counter Party No Match Modal - City 3</value>
+  </data>
+  <data name="CounterPartyFilePopup_CompanyFound_ValidationMessage" xml:space="preserve">
+    <value>Counter Party No Match Modal - Company Found Validation Message</value>
+  </data>
+  <data name="CounterPartyFilePopup_CompanyInformation" xml:space="preserve">
+    <value>Counter Party No Match Modal - Company Information</value>
+  </data>
+  <data name="CounterPartyFilePopup_Condition" xml:space="preserve">
+    <value>Counter Party No Match Modal - Condition</value>
+  </data>
+  <data name="CounterPartyFilePopup_ContactInformation" xml:space="preserve">
+    <value>Counter Party No Match Modal - Contact Information</value>
+  </data>
+  <data name="CounterPartyFilePopup_Country" xml:space="preserve">
+    <value>Counter Party No Match Modal - Country</value>
+  </data>
+  <data name="CounterPartyFilePopup_Country3" xml:space="preserve">
+    <value>Counter Party No Match Modal - Country 3</value>
+  </data>
+  <data name="CounterPartyFilePopup_DropDown_Country" xml:space="preserve">
+    <value>Counter Party No Match Modal - Country Drop Down</value>
+  </data>
+  <data name="CounterPartyFilePopup_DropDown_Disposition" xml:space="preserve">
+    <value>Counter Party No Match Modal - Disposition Drop Down</value>
+  </data>
+  <data name="CounterPartyFilePopup_DropDown_Source" xml:space="preserve">
+    <value>Counter Party No Match Modal - Source Drop Down</value>
+  </data>
+  <data name="CounterPartyFilePopup_DropDown_State" xml:space="preserve">
+    <value>Counter Party No Match Modal - State Drop Down</value>
+  </data>
+  <data name="CounterPartyFilePopup_EIN" xml:space="preserve">
+    <value>Counter Party No Match Modal - EIN</value>
+  </data>
+  <data name="CounterPartyFilePopup_Phone" xml:space="preserve">
+    <value>Counter Party No Match Modal - Phone</value>
+  </data>
+  <data name="CounterPartyFilePopup_QueueKey" xml:space="preserve">
+    <value>Counter Party No Match Modal - QueueKey</value>
+  </data>
+  <data name="CounterPartyFilePopup_RegisteredBusinessName" xml:space="preserve">
+    <value>Counter Party No Match Modal - Registered Business Name</value>
+  </data>
+  <data name="CounterPartyFilePopup_RegistrationNumber" xml:space="preserve">
+    <value>Counter Party No Match Modal - Registration Number</value>
+  </data>
+  <data name="CounterPartyFilePopup_State" xml:space="preserve">
+    <value>Counter Party No Match Modal - State</value>
+  </data>
+  <data name="CounterPartyFilePopup_State3" xml:space="preserve">
+    <value>Counter Party No Match Modal - State 3</value>
+  </data>
+  <data name="CounterPartyFilePopup_StreetAddress" xml:space="preserve">
+    <value>Counter Party No Match Modal - Street Address</value>
+  </data>
+  <data name="CounterPartyFilePopup_StreetAddress2" xml:space="preserve">
+    <value>Counter Party No Match Modal - Street Address 2</value>
+  </data>
+  <data name="CounterPartyFilePopup_TextBox_Address" xml:space="preserve">
+    <value>Counter Party No Match Modal - Address Text Box</value>
+  </data>
+  <data name="CounterPartyFilePopup_TextBox_City" xml:space="preserve">
+    <value>Counter Party No Match Modal - City Text Box</value>
+  </data>
+  <data name="CounterPartyFilePopup_TextBox_Source" xml:space="preserve">
+    <value>Counter Party No Match Modal - Source Text Box</value>
+  </data>
+  <data name="CounterPartyFilePopup_TextBox_TrackId" xml:space="preserve">
+    <value>Counter Party No Match Modal - Track Box Track Id</value>
+  </data>
+  <data name="CounterPartyFilePopup_TextBox_Zip" xml:space="preserve">
+    <value>Counter Party No Match Modal - Zip Text Box</value>
+  </data>
+  <data name="CounterPartyFilePopup_TIN" xml:space="preserve">
+    <value>Counter Party No Match Modal - TIN</value>
+  </data>
+  <data name="CounterPartyFilePopup_VAT" xml:space="preserve">
+    <value>Counter Party No Match Modal - VAT</value>
+  </data>
+  <data name="CounterPartyFilePopup_Zip" xml:space="preserve">
+    <value>Counter Party No Match Modal - Zip</value>
+  </data>
+  <data name="CounterPartyFilePopup_Zip3" xml:space="preserve">
+    <value>Counter Party No Match Modal - Zip3</value>
+  </data>
+  <data name="CounterpartyPage_BrowseButton" xml:space="preserve">
+    <value>Counter Party Page - Browse Button</value>
+  </data>
+  <data name="CounterpartyPage_ConfirmationModal" xml:space="preserve">
+    <value>Counter Party Page - Confirmation Modal</value>
+  </data>
+  <data name="CounterpartyPage_ConfirmationModal_OkButton" xml:space="preserve">
+    <value>Counter Party Page - Confirmation Modal (Ok Button)</value>
+  </data>
+  <data name="CounterpartyPage_FileInputElement" xml:space="preserve">
+    <value>Counter Party Page - File Input Element</value>
+  </data>
+  <data name="CounterpartyPage_NavigationTabsSection" xml:space="preserve">
+    <value>Counter Party Page - Navigation Tabs Section</value>
+  </data>
+  <data name="CounterpartyPage_NavigationTabsSection_Item" xml:space="preserve">
+    <value>Counter Party Page - Navigation Tabs Section (Item)</value>
+  </data>
+  <data name="CounterpartyPage_UploadButton" xml:space="preserve">
+    <value>Counter Party Page - Upload Button</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable" xml:space="preserve">
+    <value>Counter Party Page - Uploaded Files Table</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_Actions" xml:space="preserve">
+    <value>Counter Party Page - Uploaded Files Table (Column) - Actions</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_Actions_Item" xml:space="preserve">
+    <value>Counter Party Page - Uploaded Files Table (Column) - Actions Item</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_FileName" xml:space="preserve">
+    <value>Counter Party Page - Uploaded Files Table (Column) - File Name</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_LastNameFirstName" xml:space="preserve">
+    <value>Counter Party Page - Uploaded Files Table (Column) - Last Name First Name</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_Status" xml:space="preserve">
+    <value>Counter Party Page - Uploaded Files Table (Column) - Status</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Column_UploadDate" xml:space="preserve">
+    <value>Counter Party Page - Uploaded Files Table (Column) - Upload Date</value>
+  </data>
+  <data name="CounterpartyPage_UploadedFilesTable_Row" xml:space="preserve">
+    <value>Counter Party Page - Uploaded Files Table (Row)</value>
+  </data>
+  <data name="CounterpartyPage_ValidationPanel" xml:space="preserve">
+    <value>Counter Party Page - Validation Panel</value>
+  </data>
+  <data name="CounterpartyPage_ValidationPanel_MessageItem" xml:space="preserve">
+    <value>Counter Party Page - Validation Panel - Message Item</value>
+  </data>
+  <data name="CounterParty_UploadedFiles_FirstCell" xml:space="preserve">
+    <value>CounterPartyPage - UploadedFilesPage - FirstCellInTable</value>
+  </data>
+  <data name="Generic_Compliance_Icon" xml:space="preserve">
+    <value>Generic Compliance Icon</value>
+  </data>
+  <data name="Global_Spinner" xml:space="preserve">
+    <value>Global - Spinner</value>
+  </data>
+  <data name="HomePage_AdminDropdown" xml:space="preserve">
+    <value>HomePage - AdminDropDown</value>
+  </data>
+  <data name="HomePage_FirstCompanyInSearchResult" xml:space="preserve">
+    <value>HomePage - FirstCompanyInSearchResult</value>
+  </data>
+  <data name="HomePage_UploadFileToSearchLink" xml:space="preserve">
+    <value>Home Page - Upload File To Search Link</value>
+  </data>
+  <data name="Invitations_Accept" xml:space="preserve">
+    <value>Invitations (Accept)</value>
+  </data>
+  <data name="Invitations_Decline" xml:space="preserve">
+    <value>Invitation - Decline</value>
+  </data>
+  <data name="LayoutPage_CompanyName" xml:space="preserve">
+    <value>Layout Page - Company Name</value>
+  </data>
+  <data name="LayoutPage_SayHello" xml:space="preserve">
+    <value>Layout Page - Say Hello</value>
+  </data>
+  <data name="LayoutPage_SettingsContent" xml:space="preserve">
+    <value>Layout Page - Settings</value>
+  </data>
+  <data name="LayoutPage_SettingsDropdown" xml:space="preserve">
+    <value>Layout Page - Settings (Dropdown)</value>
+  </data>
+  <data name="LayoutPage_SettingsDropdown_Items" xml:space="preserve">
+    <value>Layout Page - Settings (Dropdown Items)</value>
+  </data>
+  <data name="LayoutPage_SettingsLink" xml:space="preserve">
+    <value>Layout Page - Settings (Link)</value>
+  </data>
+  <data name="LayoutPage_UserName" xml:space="preserve">
+    <value>Layout Page - User Name</value>
+  </data>
+  <data name="Layout_SettingsDropdown_Item_Link" xml:space="preserve">
+    <value>Layout - Settings Dropdown Item (Link)</value>
+  </data>
+  <data name="Linking_Button" xml:space="preserve">
+    <value>Linking Modal - Linking Button</value>
+  </data>
+  <data name="MyFilesHighConfidence_FirstCheckBox" xml:space="preserve">
+    <value>My Files - HighConfidence - First Check Box</value>
+  </data>
+  <data name="MyFilesHighConfidence_SecondCheckBox" xml:space="preserve">
+    <value>MyFiles - HighConfidence - SecondCheckBox</value>
+  </data>
+  <data name="MyFilesPage_Match_Results" xml:space="preserve">
+    <value>My Files Page - Select File Dropdown</value>
+  </data>
+  <data name="MyFiles_ComplianceChart" xml:space="preserve">
+    <value>My Files Page - Compliance Chart</value>
+  </data>
+  <data name="MyFiles_CreditScoreChart" xml:space="preserve">
+    <value>My Files Page - Credit Score Chart</value>
+  </data>
+  <data name="MyFiles_HighConfidenceMatch_Highlight" xml:space="preserve">
+    <value>My Files Page - High Confidence Highlight</value>
+  </data>
+  <data name="MyFiles_HighConfidence_Tab" xml:space="preserve">
+    <value>My Files Page - High Confidence Tab</value>
+  </data>
+  <data name="MyFiles_Insights_Highlight" xml:space="preserve">
+    <value>My Files Page - Insights Highlights</value>
+  </data>
+  <data name="MyFiles_LikelyMatch_Highlight" xml:space="preserve">
+    <value>My Files Page - Likely Match Highlight</value>
+  </data>
+  <data name="MyFiles_MatchRateChart" xml:space="preserve">
+    <value>My Files Page - Match Rate Chart</value>
+  </data>
+  <data name="MyFiles_Match_Insights_Tab" xml:space="preserve">
+    <value>My Files Page - Match Insights Tab</value>
+  </data>
+  <data name="MyFiles_NoMatch_Highlight" xml:space="preserve">
+    <value>My Files Page - No Match Highlight</value>
+  </data>
+  <data name="MyFiles_SelectFile_DropDownItems" xml:space="preserve">
+    <value>My Files Page - File Dropdown Items</value>
+  </data>
+  <data name="MyFiles_SelectFile_DropDownItem_FileName" xml:space="preserve">
+    <value>My Files Page - File Dropdown - File Name</value>
+  </data>
+  <data name="MyFiles_SelectFile_DropDownItem_Status" xml:space="preserve">
+    <value>My Files Page - File Dropdown - File Status</value>
+  </data>
+  <data name="MyFiles_SubscriptionModal_CancelButton" xml:space="preserve">
+    <value>My Files Page - Subscription Modal Cancel Button</value>
+  </data>
+  <data name="MyFiles_SubscriptionModal_PurchaseButton" xml:space="preserve">
+    <value>My Files Page - Subscription Modal Purchase Button</value>
+  </data>
+  <data name="MyFiles_Subscription_Modal" xml:space="preserve">
+    <value>My Files Page - Subscription Modal</value>
+  </data>
+  <data name="MyPurchases_Page" xml:space="preserve">
+    <value>My Purchases Page</value>
+  </data>
+  <data name="MyPurchases_Table" xml:space="preserve">
+    <value>My Purchases Table</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_City" xml:space="preserve">
+    <value>My Purchases Table - Filter - City</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_Country" xml:space="preserve">
+    <value>My Purchases Table - Filter - Country</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_CreditScore" xml:space="preserve">
+    <value>My Purchases Table - Filter - Credit Score</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_Latest" xml:space="preserve">
+    <value>My Purchases Table - Filter - Latest</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_PurchaseDate_RangeEnd" xml:space="preserve">
+    <value>My Purchases Table - Filter - Purchase Date Range End</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_PurchaseDate_RangeStart" xml:space="preserve">
+    <value>My Purchases Table - Filter - Purchase Date Range Start</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_Row" xml:space="preserve">
+    <value>My Purchases Table - Filter - Row</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_State" xml:space="preserve">
+    <value>My Purchases Table - Filter - State</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_Status" xml:space="preserve">
+    <value>My Purchases Table - Filter - Status</value>
+  </data>
+  <data name="MyPurchases_Table_Filter_Zip" xml:space="preserve">
+    <value>My Purchases Table - Filter - Zip</value>
+  </data>
+  <data name="MyPurchases_Table_Row" xml:space="preserve">
+    <value>My Purchases Table - Row</value>
+  </data>
+  <data name="MyPurchases_Table_Row_City" xml:space="preserve">
+    <value>My Purchases Table - Row - City</value>
+  </data>
+  <data name="MyPurchases_Table_Row_CompanyName" xml:space="preserve">
+    <value>My Purchases Table - Row - Company Name</value>
+  </data>
+  <data name="MyPurchases_Table_Row_Country" xml:space="preserve">
+    <value>My Purchases Table - Row - Country</value>
+  </data>
+  <data name="MyPurchases_Table_Row_CreditScore" xml:space="preserve">
+    <value>My Purchases Table - Row - Credit Score</value>
+  </data>
+  <data name="MyPurchases_Table_Row_ExpirationStatus" xml:space="preserve">
+    <value>My Purchases Table - Row - Expiration Status</value>
+  </data>
+  <data name="MyPurchases_Table_Row_First" xml:space="preserve">
+    <value>MyPurchases - Table - Row - First</value>
+  </data>
+  <data name="MyPurchases_Table_Row_Latest" xml:space="preserve">
+    <value>My Purchases Table - Row - Latest</value>
+  </data>
+  <data name="MyPurchases_Table_Row_PurchaseDate" xml:space="preserve">
+    <value>My Purchases Table - Row - Purchase Date</value>
+  </data>
+  <data name="MyPurchases_Table_Row_State" xml:space="preserve">
+    <value>My Purchases Table - Row - State</value>
+  </data>
+  <data name="MyPurchases_Table_Row_Status" xml:space="preserve">
+    <value>My Purchases Table - Row - Status</value>
+  </data>
+  <data name="MyPurchases_Table_Row_StreetAddress" xml:space="preserve">
+    <value>My Purchases Table - Row - Street Address</value>
+  </data>
+  <data name="MyPurchases_Table_Row_TotalAlerts" xml:space="preserve">
+    <value>My Purchases Table - Row - Total Alerts</value>
+  </data>
+  <data name="MyPurchases_Table_Row_Zip" xml:space="preserve">
+    <value>My Purchases Table - Row - Zip</value>
+  </data>
+  <data name="My_Files_HighConfidence_Root" xml:space="preserve">
+    <value>My File High Confidence Root</value>
+  </data>
+  <data name="My_Files_HighConfidence_Tab" xml:space="preserve">
+    <value>My Files - High Confidence Tab</value>
+  </data>
+  <data name="My_Files_HighConfidence_Table" xml:space="preserve">
+    <value>My Files - HighConfidence - Table</value>
+  </data>
+  <data name="My_Files_LikelyMatch_Tab" xml:space="preserve">
+    <value>My Files - Likely Match Tab</value>
+  </data>
+  <data name="My_Files_MatchInsights_Tab" xml:space="preserve">
+    <value>My Files - Match Insights Tab</value>
+  </data>
+  <data name="My_Files_NoMatch_Tab" xml:space="preserve">
+    <value>My Files - No Match Tab</value>
+  </data>
+  <data name="My_Files_Purchase_Premium_Monitoring" xml:space="preserve">
+    <value>My Files Purchase Button</value>
+  </data>
+  <data name="My_Purchases_AlertIcon" xml:space="preserve">
+    <value>My Purchases - Alert Icon</value>
+  </data>
+  <data name="Navigation_Admin" xml:space="preserve">
+    <value>Navigation - Admin</value>
+  </data>
+  <data name="Navigation_AdminSection_AdminDirectoryLink" xml:space="preserve">
+    <value>Navigation - Directory</value>
+  </data>
+  <data name="Navigation_AdminSection_CounterPartyLink" xml:space="preserve">
+    <value>Navigation - Counter Party</value>
+  </data>
+  <data name="Navigation_AdminSection_DataStewartQueueLink" xml:space="preserve">
+    <value>Navigation - Data Steward Queue</value>
+  </data>
+  <data name="Navigation_Admin_Search" xml:space="preserve">
+    <value>Navigation - Admin (Search Directory)</value>
+  </data>
+  <data name="Navigation_CompanyProfile" xml:space="preserve">
+    <value>Navigation - Company Profile</value>
+  </data>
+  <data name="Navigation_CompanyProfile_AccountDetails" xml:space="preserve">
+    <value>Navigation - Company Profile (Account Details)</value>
+  </data>
+  <data name="Navigation_CompanyProfile_ManagePaymentAccounts" xml:space="preserve">
+    <value>Navigation - Company Profile (Manage Payment Accounts)</value>
+  </data>
+  <data name="Navigation_CompanyProfile_Reporting" xml:space="preserve">
+    <value>Navigation - Company Profile (Reporting)</value>
+  </data>
+  <data name="Navigation_CompanyProfile_RolesEntitlments" xml:space="preserve">
+    <value>Navigation - Company Profile (Roles &amp; Entitlments)</value>
+  </data>
+  <data name="Navigation_CompanyProfile_Users" xml:space="preserve">
+    <value>Navigation - Company Profile (Users)</value>
+  </data>
+  <data name="Navigation_MyBuyers" xml:space="preserve">
+    <value>Navigation - My Buyers</value>
+  </data>
+  <data name="Navigation_MyBuyers_Buyers" xml:space="preserve">
+    <value>Navigation - My Buyers (Buyers)</value>
+  </data>
+  <data name="Navigation_MyBuyers_Invitations" xml:space="preserve">
+    <value>Navigation - My Buyers (Invitations)</value>
+  </data>
+  <data name="Navigation_MyPurchases" xml:space="preserve">
+    <value>Navigation - My Purchases</value>
+  </data>
+  <data name="Navigation_MySuppliers" xml:space="preserve">
+    <value>Navigation - My Suppliers</value>
+  </data>
+  <data name="Navigation_MySuppliers_Invitations" xml:space="preserve">
+    <value>Navigation - My Suppliers (Invitations)</value>
+  </data>
+  <data name="Navigation_MySuppliers_Suppliers" xml:space="preserve">
+    <value>Navigation - My Suppliers (Suppliers)</value>
+  </data>
+  <data name="Navigation_My_Files" xml:space="preserve">
+    <value>Navigation - My Files</value>
+  </data>
+  <data name="Navigation_NewRecordRequest" xml:space="preserve">
+    <value>Navigation - New Record Request</value>
+  </data>
+  <data name="Navigation_Subscriptions" xml:space="preserve">
+    <value>Navigation - Subscriptions</value>
+  </data>
+  <data name="Navigation_Subscriptions_PaymentServices" xml:space="preserve">
+    <value>Navigation - Subscriptions (Payment Services)</value>
+  </data>
+  <data name="Navigation_TrackDirectory" xml:space="preserve">
+    <value>Navigation - Track Directory</value>
+  </data>
+  <data name="Navigation_Transactions" xml:space="preserve">
+    <value>Navigation - Transactions</value>
+  </data>
+  <data name="Navigation_Transactions_InProgress" xml:space="preserve">
+    <value>Navigation - Transactions (In Progress)</value>
+  </data>
+  <data name="Navigation_Transactions_Invoices" xml:space="preserve">
+    <value>Navigation - Transactions (Invoices)</value>
+  </data>
+  <data name="Navigation_Transactions_PastPayments" xml:space="preserve">
+    <value>Navigation - Transactions (Past Payments)</value>
+  </data>
+  <data name="NewRecordRequest_CompanyFound_ValidationMessage" xml:space="preserve">
+    <value>New Record Request Page - Company Found Validation Message</value>
+  </data>
+  <data name="NewRecordRequest_ConfirmModal" xml:space="preserve">
+    <value>New Record Request Page - Confirm Modal</value>
+  </data>
+  <data name="NewRecordRequest_ConfirmModal_Cancel" xml:space="preserve">
+    <value>New Record Request Page - Confirm Modal - Cancel</value>
+  </data>
+  <data name="NewRecordRequest_ConfirmModal_Confirm" xml:space="preserve">
+    <value>New Record Request Page - Confirm Modal - Confirm</value>
+  </data>
+  <data name="NewRecordRequest_ConfirmModal_OrgIdInput" xml:space="preserve">
+    <value>New Record Request Page - Confirm Modal - Org ID Input</value>
+  </data>
+  <data name="NewRecordRequest_DetailsModal" xml:space="preserve">
+    <value>New Record Request Page - Details (Modal)</value>
+  </data>
+  <data name="NewRecordRequest_DetailsModal_Approve" xml:space="preserve">
+    <value>New Record Request Page - Details Modal - Approve</value>
+  </data>
+  <data name="NewRecordRequest_DetailsModal_Cancel" xml:space="preserve">
+    <value>New Record Request Page - Details Modal - Cancel</value>
+  </data>
+  <data name="NewRecordRequest_DetailsModal_Reject" xml:space="preserve">
+    <value>New Record Request Page - Details Modal - Reject</value>
+  </data>
+  <data name="NewRecordRequest_Modal_ConfirmRequest" xml:space="preserve">
+    <value>New Record Request Page - Modal Confirm Request</value>
+  </data>
+  <data name="NewRecordRequest_Table" xml:space="preserve">
+    <value>New Record Request Page (Table)</value>
+  </data>
+  <data name="NewRecordRequest_TableColumn_Date" xml:space="preserve">
+    <value>New Record Request Page - Table - Column (Date)</value>
+  </data>
+  <data name="NewRecordRequest_TableColumn_RecordId" xml:space="preserve">
+    <value>New Record Request Page - Table - Column (Record ID)</value>
+  </data>
+  <data name="NewRecordRequest_TableColumn_State" xml:space="preserve">
+    <value>New Record Request Page - Table - Column (State)</value>
+  </data>
+  <data name="NewRecordRequest_TableErrorFound" xml:space="preserve">
+    <value>New Record Request Page - Table - Error Found</value>
+  </data>
+  <data name="NewRecordRequest_TableNoRecords" xml:space="preserve">
+    <value>New Record Request Page - Table - No Records</value>
+  </data>
+  <data name="NewRecordRequest_TableRow" xml:space="preserve">
+    <value>New Record Request Page - Table (Row)</value>
+  </data>
+  <data name="NewRecordRequest_TableRow_Link" xml:space="preserve">
+    <value>New Record Request - Table Row Link</value>
+  </data>
+  <data name="NewRegistrationPage_Address1" xml:space="preserve">
+    <value>New Registration Page - Address Line 1</value>
+  </data>
+  <data name="NewRegistrationPage_Address2" xml:space="preserve">
+    <value>New Registration Page - Address Line 2</value>
+  </data>
+  <data name="NewRegistrationPage_Branch" xml:space="preserve">
+    <value>New Registration Page - Branch</value>
+  </data>
+  <data name="NewRegistrationPage_BusinessClassification" xml:space="preserve">
+    <value>New Registration Page - Industry Information - Business Classification</value>
+  </data>
+  <data name="NewRegistrationPage_City" xml:space="preserve">
+    <value>New Registration Page - City</value>
+  </data>
+  <data name="NewRegistrationPage_ComapanyPhoneType" xml:space="preserve">
+    <value>New Registration Page - Company Phone Type</value>
+  </data>
+  <data name="NewRegistrationPage_ComapanyPhoneType2" xml:space="preserve">
+    <value>New Registration Page - Company Phone Type 2</value>
+  </data>
+  <data name="NewRegistrationPage_ComapanyPhoneType3" xml:space="preserve">
+    <value>New Registration Page - Company Phone Type 3</value>
+  </data>
+  <data name="NewRegistrationPage_ComapanyURL" xml:space="preserve">
+    <value>New Registration Page - Company URL</value>
+  </data>
+  <data name="NewRegistrationPage_CompanyPhoneNumber" xml:space="preserve">
+    <value>New Registration Page - Company Phone Number 1</value>
+  </data>
+  <data name="NewRegistrationPage_CompanyPhoneNumber2" xml:space="preserve">
+    <value>New Registration Page - Company Phone Number 2</value>
+  </data>
+  <data name="NewRegistrationPage_CompanyPhoneNumber3" xml:space="preserve">
+    <value>New Registration Page - Company Phone Number 3</value>
+  </data>
+  <data name="NewRegistrationPage_CompleteRegistration" xml:space="preserve">
+    <value>New Registration Page - Complete Registration</value>
+  </data>
+  <data name="NewRegistrationPage_ContactPersonEmail" xml:space="preserve">
+    <value>New Registration Page - Contact Person Email</value>
+  </data>
+  <data name="NewRegistrationPage_ContactPersonEmailConfirmation" xml:space="preserve">
+    <value>New Registration Page - Contact Person Email Confirmation</value>
+  </data>
+  <data name="NewRegistrationPage_ContactPersonFirstName" xml:space="preserve">
+    <value>New Registration Page - Contact Person First Name</value>
+  </data>
+  <data name="NewRegistrationPage_ContactPersonLastName" xml:space="preserve">
+    <value>New Registration Page - Contact Person Last Name</value>
+  </data>
+  <data name="NewRegistrationPage_ContactPersonPhone" xml:space="preserve">
+    <value>New Registration Page - Contact Person Phone</value>
+  </data>
+  <data name="NewRegistrationPage_Contact_Information_ContinueButton" xml:space="preserve">
+    <value>New Registration Page - Contact Information -  Continue Button</value>
+  </data>
+  <data name="NewRegistrationPage_ContinueButton" xml:space="preserve">
+    <value>New Registration Page - Company Details Continue Button</value>
+  </data>
+  <data name="NewRegistrationPage_Country" xml:space="preserve">
+    <value>New Registration Page - Country</value>
+  </data>
+  <data name="NewRegistrationPage_EIN" xml:space="preserve">
+    <value>New Registration Page - EIN</value>
+  </data>
+  <data name="NewRegistrationPage_Industry_Information_ContinueButton" xml:space="preserve">
+    <value>New Registration Page - Industry Information -  Continue Button</value>
+  </data>
+  <data name="NewRegistrationPage_OtherCountryID" xml:space="preserve">
+    <value>New Registration Page - Other Country ID</value>
+  </data>
+  <data name="NewRegistrationPage_RegisteredBusinessName" xml:space="preserve">
+    <value>New Registration Page - Registered Business Name</value>
+  </data>
+  <data name="NewRegistrationPage_SSN" xml:space="preserve">
+    <value>New Registration Page - SSN</value>
+  </data>
+  <data name="NewRegistrationPage_State" xml:space="preserve">
+    <value>New Registration Page - State</value>
+  </data>
+  <data name="NewRegistrationPage_TaxID" xml:space="preserve">
+    <value>New Registration Page - TaxID</value>
+  </data>
+  <data name="NewRegistrationPage_TermsOfUse_Term1" xml:space="preserve">
+    <value>New Registration Page - Terms Of Use - Term1</value>
+  </data>
+  <data name="NewRegistrationPage_TermsOfUse_Term2" xml:space="preserve">
+    <value>New Registration Page - Terms Of Use - Term2</value>
+  </data>
+  <data name="NewRegistrationPage_TermsOfUse_Term3" xml:space="preserve">
+    <value>New Registration Page - Terms Of Use - Term3</value>
+  </data>
+  <data name="NewRegistrationPage_VAT" xml:space="preserve">
+    <value>New Registration Page - VAT</value>
+  </data>
+  <data name="NewRegistrationPage_Zip" xml:space="preserve">
+    <value>New Registration Page - Zip</value>
+  </data>
+  <data name="Onbaording_Address1" xml:space="preserve">
+    <value>Onboarding - Register Company (Address 1)</value>
+  </data>
+  <data name="Onbaording_Address2" xml:space="preserve">
+    <value>Onboarding - Register Company (Address 2)</value>
+  </data>
+  <data name="Onbaording_Branch" xml:space="preserve">
+    <value>Onboarding - Register Company (Branch)</value>
+  </data>
+  <data name="Onbaording_BusinessClassification" xml:space="preserve">
+    <value>Onboarding - Register Company (Business Classification)</value>
+  </data>
+  <data name="Onbaording_CompanyBusinessDescription" xml:space="preserve">
+    <value>Onboarding - Register Company (Company Business Description)</value>
+  </data>
+  <data name="Onbaording_CompanyNumber" xml:space="preserve">
+    <value>Onboarding - Register Company (Company Number)</value>
+  </data>
+  <data name="Onbaording_CompanyURL" xml:space="preserve">
+    <value>Onboarding - Register Company (Company URL)</value>
+  </data>
+  <data name="Onbaording_ComplianceVendorID" xml:space="preserve">
+    <value>Onboarding - Register Company (Compliance Vendor ID)</value>
+  </data>
+  <data name="Onbaording_ContactDetail_ContactFirstName" xml:space="preserve">
+    <value>Onboarding - Register Company (ContactDetail Contact First Name)</value>
+  </data>
+  <data name="Onbaording_ContactDetail_ContactLastName" xml:space="preserve">
+    <value>Onboarding - Register Company (ContactDetail Contact Last Name)</value>
+  </data>
+  <data name="Onbaording_ContactDetail_ContactPersonEmail" xml:space="preserve">
+    <value>Onboarding - Register Company (ContactDetail Contact Person Email)</value>
+  </data>
+  <data name="Onbaording_ContactPersonPhone2" xml:space="preserve">
+    <value>Onboarding - Register Company (Contact Person Phone 2)</value>
+  </data>
+  <data name="Onbaording_ContactPersonPhone3" xml:space="preserve">
+    <value>Onboarding - Register Company (Contact Person Phone 3)</value>
+  </data>
+  <data name="Onbaording_Country" xml:space="preserve">
+    <value>Onboarding - Register Company (Country)</value>
+  </data>
+  <data name="Onbaording_CurrentAlternativeLegalName" xml:space="preserve">
+    <value>Onboarding - Register Company (Current Alternative Legal Name)</value>
+  </data>
+  <data name="Onbaording_DateOfCompanyRegistration" xml:space="preserve">
+    <value>Onboarding - Register Company (Date of Company Registration)</value>
+  </data>
+  <data name="Onbaording_DateOfStartingOperation" xml:space="preserve">
+    <value>Onboarding - Register Company (Date of Starting Operation)</value>
+  </data>
+  <data name="Onbaording_EIN" xml:space="preserve">
+    <value>Onboarding - Register Company (EIN)</value>
+  </data>
+  <data name="Onbaording_FaxNumber" xml:space="preserve">
+    <value>Onboarding - Register Company (Fax Number)</value>
+  </data>
+  <data name="Onbaording_IDFromBuyer" xml:space="preserve">
+    <value>Onboarding - Register Company (ID from Buyer)</value>
+  </data>
+  <data name="Onbaording_IDFromNetwork" xml:space="preserve">
+    <value>Onboarding - Register Company (ID fromNetwork)</value>
+  </data>
+  <data name="Onbaording_IndustryCode" xml:space="preserve">
+    <value>Onboarding - Register Company (Industry Code)</value>
+  </data>
+  <data name="Onbaording_IndustryDescription" xml:space="preserve">
+    <value>Onboarding - Register Company (Industry Description)</value>
+  </data>
+  <data name="Onbaording_OrganizationName" xml:space="preserve">
+    <value>Onboarding - Register Company (Organization Name)</value>
+  </data>
+  <data name="Onbaording_PhoneNumber" xml:space="preserve">
+    <value>Onboarding - Register Company (Phone Number)</value>
+  </data>
+  <data name="Onbaording_PhoneType1" xml:space="preserve">
+    <value>Onboarding - Register Company (PhoneType1)</value>
+  </data>
+  <data name="Onbaording_PhoneType2" xml:space="preserve">
+    <value>Onboarding - Register Company (PhoneType2)</value>
+  </data>
+  <data name="Onbaording_PhoneType3" xml:space="preserve">
+    <value>Onboarding - Register Company (Phone Type 3)</value>
+  </data>
+  <data name="Onbaording_RegisteredBusinessName" xml:space="preserve">
+    <value>Onboarding - Register Company (Registered Business Name)</value>
+  </data>
+  <data name="Onbaording_RegistryUrl" xml:space="preserve">
+    <value>Onboarding - Register Company (Registry Url)</value>
+  </data>
+  <data name="Onbaording_SendInvite" xml:space="preserve">
+    <value>Onbaording Send Invite - Toggle</value>
+  </data>
+  <data name="Onbaording_State" xml:space="preserve">
+    <value>Onboarding - Register Company (State)</value>
+  </data>
+  <data name="Onbaording_TaxCode" xml:space="preserve">
+    <value>Onboarding - Register Company (Tax Code)</value>
+  </data>
+  <data name="Onbaording_TypeOfOwnership" xml:space="preserve">
+    <value>Onboarding - Register Company (Type Of Ownership)</value>
+  </data>
+  <data name="Onbaording_Zip" xml:space="preserve">
+    <value>Onboarding - Register Company (Zip)</value>
+  </data>
+  <data name="Onboarding_City" xml:space="preserve">
+    <value>Onboarding - Register Company (City)</value>
+  </data>
+  <data name="Onboarding_Reset_Button" xml:space="preserve">
+    <value>Onbaording - Reset Button</value>
+  </data>
+  <data name="Onboarding_Save_Button" xml:space="preserve">
+    <value>Onboarding - Save Button</value>
+  </data>
+  <data name="Pagination_ControlSet" xml:space="preserve">
+    <value>Pagination - Control Set</value>
+  </data>
+  <data name="Pagination_Next" xml:space="preserve">
+    <value>Pagination - Next Button</value>
+  </data>
+  <data name="Pagination_PageNumbers" xml:space="preserve">
+    <value>Pagination - Page Buttons</value>
+  </data>
+  <data name="Pagination_Previous" xml:space="preserve">
+    <value>Pagination - Previous Button</value>
+  </data>
+  <data name="PaymentServices_MakePayments" xml:space="preserve">
+    <value>Payment Services - Make Payments Section</value>
+  </data>
+  <data name="PaymentServices_MakePayments_SubscribeNotRequested_SubscribeButton" xml:space="preserve">
+    <value>Payment Services - Make Payments (Subscribe Button)</value>
+  </data>
+  <data name="PaymentServices_MakePayments_SubscribeRequested_SentMessage" xml:space="preserve">
+    <value>Payment Services - Make Payments (Admin Send Message)</value>
+  </data>
+  <data name="PaymentServices_ReceivePayment" xml:space="preserve">
+    <value>Payment Services - Receive Payments Section</value>
+  </data>
+  <data name="PaymentServices_ReceivePayments_SubscribeRequested_SentMessage" xml:space="preserve">
+    <value>Payment Services - Receive Payments (Admin Send Message)</value>
+  </data>
+  <data name="PaymentServices_ReceivePayment_SubscribeNotRequested_SubscribeButton" xml:space="preserve">
+    <value>Payment Services - Receive Payments (Subscribe Button)</value>
+  </data>
+  <data name="PrivacyNotice_IAgree" xml:space="preserve">
+    <value>Privacy Notice - I agree</value>
+  </data>
+  <data name="PrivacyNotice_Term1" xml:space="preserve">
+    <value>Privacy Notice - Checkbox 1</value>
+  </data>
+  <data name="PrivacyNotice_Term2" xml:space="preserve">
+    <value>Privacy Notice - Checkbox 2</value>
+  </data>
+  <data name="PrivacyNotice_Term3" xml:space="preserve">
+    <value>Privacy Notice - Checkbox 3</value>
+  </data>
+  <data name="Purchases_Confirmation_Button" xml:space="preserve">
+    <value>Purchase Confirmation Button</value>
+  </data>
+  <data name="QueuePage_Button_DownloadReportToCSV" xml:space="preserve">
+    <value>QueuePage - DownloadReportToCSV</value>
+  </data>
+  <data name="QueuePage_DownloadCSVWithRange" xml:space="preserve">
+    <value>QueuePage - DownloadCSVWithRange</value>
+  </data>
+  <data name="QueuePage_RootValidate" xml:space="preserve">
+    <value>QueuePage Root Validate</value>
+  </data>
+  <data name="QueuePage_Table_RequestFilterKey" xml:space="preserve">
+    <value>Queue Page - Request Type Filter button</value>
+  </data>
+  <data name="QueuePage_Table_StateFilterKey" xml:space="preserve">
+    <value>Queue Page - State Filter button</value>
+  </data>
+  <data name="QueuePage_Table_State_Select" xml:space="preserve">
+    <value>Queue Page - Table Column (State) - Select</value>
+  </data>
+  <data name="Queue_Table" xml:space="preserve">
+    <value>Queue Page - Table ID</value>
+  </data>
+  <data name="Queue_Table_Column_Business_Name" xml:space="preserve">
+    <value>Queue Page - Table Column (Business Name)</value>
+  </data>
+  <data name="Queue_Table_Column_Receipt_Date" xml:space="preserve">
+    <value>Queue Page - Table Column (Receipt Date)</value>
+  </data>
+  <data name="Queue_Table_Column_Request_Type" xml:space="preserve">
+    <value>Queue Page - Table Column (Request Type)</value>
+  </data>
+  <data name="Queue_Table_Column_State" xml:space="preserve">
+    <value>Queue Page - Table Column (State)</value>
+  </data>
+  <data name="Queue_Table_Filter_Request_Type" xml:space="preserve">
+    <value>Queue Page - Table Column (Request Type) - Filter</value>
+  </data>
+  <data name="Queue_Table_Filter_State" xml:space="preserve">
+    <value>Queue Page - Table Column (State) - Filter</value>
+  </data>
+  <data name="Queue_Table_Header_Business_Name" xml:space="preserve">
+    <value>Queue Table - Header - Business Name</value>
+  </data>
+  <data name="Queue_Table_Header_Receipt_Date" xml:space="preserve">
+    <value>Queue Table - Header - Receipt Date</value>
+  </data>
+  <data name="Queue_Table_Header_Request_Type" xml:space="preserve">
+    <value>Queue Table - Header - Request Type</value>
+  </data>
+  <data name="Queue_Table_Header_Row" xml:space="preserve">
+    <value>Queue Table - Header Row</value>
+  </data>
+  <data name="Queue_Table_Header_State" xml:space="preserve">
+    <value>Queue Table - Header - State</value>
+  </data>
+  <data name="Queue_Table_Header_Updated_By" xml:space="preserve">
+    <value>Queue Table - Header - Updated By</value>
+  </data>
+  <data name="Queue_Table_Header_Updated_Date" xml:space="preserve">
+    <value>Queue Table - Header - Updated Date</value>
+  </data>
+  <data name="Queue_Table_Row" xml:space="preserve">
+    <value>Queue Page - Table Row</value>
+  </data>
+  <data name="Queue_Table_Updated_By" xml:space="preserve">
+    <value>Queue Page - Table Column (Updated By)</value>
+  </data>
+  <data name="Queue_Table_Updated_Date" xml:space="preserve">
+    <value>Queue Page - Table Column (Updated Date)</value>
+  </data>
+  <data name="Register_New_Company_In_Track" xml:space="preserve">
+    <value>Register a New Company Link</value>
+  </data>
+  <data name="RelationshipDetails_Edit" xml:space="preserve">
+    <value>Relationship Details - Edit Button</value>
+  </data>
+  <data name="RelationshipDetails_Edit_SaveButton" xml:space="preserve">
+    <value>Relationship Details -Save Button</value>
+  </data>
+  <data name="RelationshipDetails_RemitFromText" xml:space="preserve">
+    <value>Relationship Details - Remit From Text</value>
+  </data>
+  <data name="RelationshipDetails_RemitToText" xml:space="preserve">
+    <value>Relationship Details - Remit To Text</value>
+  </data>
+  <data name="ReportingPage_Controller" xml:space="preserve">
+    <value>Reporting Page- Landing form</value>
+  </data>
+  <data name="ReportingPage_GenerateReportButton" xml:space="preserve">
+    <value>Reporting Page -Generate report button </value>
+  </data>
+  <data name="ReportingPage_Navigation" xml:space="preserve">
+    <value>Reporting Page- Navigation</value>
+  </data>
+  <data name="ReportingPage_NoDataReportAlert" xml:space="preserve">
+    <value>Reporting Page -No data found alert</value>
+  </data>
+  <data name="ReportingPage_PayemntReportForBuyers" xml:space="preserve">
+    <value>Reporting Page- Payemnt Report For Buyers link</value>
+  </data>
+  <data name="ReportingPage_PayemntReportForSuppliers" xml:space="preserve">
+    <value>Reporting Page- Payemnt Report For Suppliers</value>
+  </data>
+  <data name="SearchDirectory_CompanyNameInput" xml:space="preserve">
+    <value>Search Directory - Company Name</value>
+  </data>
+  <data name="SearchDirectory_InviteAsBuyerButton" xml:space="preserve">
+    <value>Search Directory - Invite as Buyer Button</value>
+  </data>
+  <data name="SearchDirectory_InviteAsSupplierButton" xml:space="preserve">
+    <value>Search Directory - Invite as Supplier Button</value>
+  </data>
+  <data name="SearchDirectory_SearchButton" xml:space="preserve">
+    <value>Search Directory - Search Button</value>
+  </data>
+  <data name="SearchDirectory_TableColumn_CompanyName" xml:space="preserve">
+    <value>Search Directory - Table Column (Company Name)</value>
+  </data>
+  <data name="SearchDirectory_TableColumn_Selected" xml:space="preserve">
+    <value>Search Directory - Table Column (Is Selected)</value>
+  </data>
+  <data name="SearchDirectory_TableRows" xml:space="preserve">
+    <value>Search Directory - Table Rows</value>
+  </data>
+  <data name="SupplierInvitations_Pending_Column_Accept" xml:space="preserve">
+    <value>Supplier Invitations - Pending Column (Accept)</value>
+  </data>
+  <data name="SupplierInvitations_Pending_Column_CompanyName" xml:space="preserve">
+    <value>Supplier Invitations - Pending Column (Company Name)</value>
+  </data>
+  <data name="SupplierInvitations_Pending_Column_Reject" xml:space="preserve">
+    <value>Supplier Invitations - Pending Column (Reject)</value>
+  </data>
+  <data name="SupplierInvitations_Pending_Rows" xml:space="preserve">
+    <value>Supplier Invitations - Pending (Rows)</value>
+  </data>
+  <data name="SupplierInvitations_Sent_Rows" xml:space="preserve">
+    <value>Supplier Invitations - Sent(Rows)</value>
+  </data>
+  <data name="TermsAndConditions_IAgree" xml:space="preserve">
+    <value>Terms and Conditions - I agree</value>
+  </data>
+  <data name="TermsAndConditions_Term1" xml:space="preserve">
+    <value>Terms and Conditions - Checkbox 1</value>
+  </data>
+  <data name="TermsAndConditions_Term2" xml:space="preserve">
+    <value>Terms and Conditions - Checkbox 2</value>
+  </data>
+  <data name="TermsAndConditions_Term3" xml:space="preserve">
+    <value>Terms and Conditions - Checkbox 3</value>
+  </data>
+  <data name="UserPage_RejectChange_Modal_CancelRejectionButton" xml:space="preserve">
+    <value>User Page - Reject Change Popup Modal (Cancel Button)</value>
+  </data>
+  <data name="UserPage_RejectChange_Modal_CancelRejectionButtonTopCorner" xml:space="preserve">
+    <value>User Page - Reject Change Popup Modal (Cancel Button) - Top Corner</value>
+  </data>
+  <data name="UserPage_RejectChange_Modal_InputText" xml:space="preserve">
+    <value>User Page - Reject Change Popup Modal (Input Text)</value>
+  </data>
+  <data name="UserPage_RejectChange_Modal_ModalTitle" xml:space="preserve">
+    <value>User Page - Reject Change Popup Modal (Title)</value>
+  </data>
+  <data name="UserPage_RejectChange_Modal_RejectChangesButton" xml:space="preserve">
+    <value>User Page - Reject Change Popup Modal (Reject Changes Button)</value>
+  </data>
+  <data name="UserPage_RejectChange_PopupModal" xml:space="preserve">
+    <value>User Page - Reject Change Popup Modal</value>
+  </data>
+  <data name="UserPage_RolesPopup" xml:space="preserve">
+    <value>User Page - Roles Popup</value>
+  </data>
+  <data name="UserPage_RolesPopup_Approve" xml:space="preserve">
+    <value>User Page - Roles Popup (Approve)</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection" xml:space="preserve">
+    <value>User Page - Roles Popup (Category Section)</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_CategoryLabel" xml:space="preserve">
+    <value>User Page - Roles Popup (Category Section) - Label</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection" xml:space="preserve">
+    <value>User Page - Roles Popup (Role Section)</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection_Changed" xml:space="preserve">
+    <value>User Page - Roles Popup (Role Section) - Awaited Changes</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection_Changed_Checkbox" xml:space="preserve">
+    <value>User Page - Roles Popup (Role Section - Checkbox) - Awaited Changes</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection_Changed_Label" xml:space="preserve">
+    <value>User Page - Roles Popup (Role Section - Label) - Awaited Changes</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection_Checkbox" xml:space="preserve">
+    <value>User Page - Roles Popup (Role Section - Checkbox)</value>
+  </data>
+  <data name="UserPage_RolesPopup_CategorySection_RoleSection_Label" xml:space="preserve">
+    <value>User Page - Roles Popup (Role Section - Label)</value>
+  </data>
+  <data name="UserPage_RolesPopup_Close" xml:space="preserve">
+    <value>User Page - Roles Popup (Close)</value>
+  </data>
+  <data name="UserPage_RolesPopup_Reject" xml:space="preserve">
+    <value>User Page - Roles Popup (Reject)</value>
+  </data>
+  <data name="UserPage_RolesPopup_Save" xml:space="preserve">
+    <value>User Page - Roles Popup (Save)</value>
+  </data>
+  <data name="UserPage_Table_Column_Email" xml:space="preserve">
+    <value>User Page - Table Column (Email)</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="UserPage_Table_Column_Name" xml:space="preserve">
+    <value>User Page - Table Column (Name)</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="UserPage_Table_Column_Roles" xml:space="preserve">
+    <value>User Page - Table Column (Role)</value>
+    <comment>Needs attention</comment>
+  </data>
+  <data name="UserPage_Table_Column_Roles_WaitingApprovalFlag" xml:space="preserve">
+    <value>User Page - Table Column (Role) - Await Approval Flag</value>
+  </data>
+  <data name="UserPage_Table_UserRow" xml:space="preserve">
+    <value>User Page - Table (Row)</value>
+  </data>
+  <data name="NewRegistrationPage_ContactTab" xml:space="preserve">
+    <value>NewRegistrationPage - Company Details ContactTab</value>
+  </data>
+  <data name="NewRegistrationPage_TOUPNTab" xml:space="preserve">
+    <value>NewRegistrationPage - Company Details TOUPNTab</value>
+  </data>
+</root>
