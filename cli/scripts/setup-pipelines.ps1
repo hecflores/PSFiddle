@@ -58,9 +58,13 @@ Write-Output "Getting files..."
 $allYamlFiles      = Get-ChildItem -Path $rootDirectory -Filter "*.vsts-ci.yml" -Recurse  
 $existingYamlFiles = az devops invoke --area build --resource definitions --org $organization --route-parameters @("project=$project") --query-parameters @("includeAllProperties=true","repositoryId=$repositoryId","repositoryType=$repositoryType") --api-version 5.1  --query "value[*].{yamlFileName: process.yamlFilename, Id: id}" | ConvertFrom-Json
 
+$existingYamlFiles | Foreach-Object {
+	$_.yamlFileName = $_.yamlFileName -replace "$prefix\/",""
+}
+
 $existingYamlFiles = $existingYamlFiles | ForEach-Object{ @{
     FullFilePath = ([System.IO.Path]::GetFullPath([System.IO.Path]::Combine($rootDirectory, "./$($_.yamlFileName)"))  -replace "[\/\\]","/");
-    RelativeFilePath = ($($_.yamlFileName) -replace "[\/\\]","/");
+    RelativeFilePath = (($($_.yamlFileName) -replace "$prefix\/","") -replace "[\/\\]","/");
     DefinitionId = $_.Id;
     FolderPath = ([System.IO.Path]::GetFullPath([System.IO.Path]::Combine($rootDirectory, "./$($_.yamlFileName)/../"))  -replace "[\/\\]","/");
     RelativeFolderPath = (($($_.yamlFileName) -replace "^([^\/\\])",'/$1') -replace "[\/\\]","/") -replace "\/[^\/]+$","";
@@ -122,7 +126,7 @@ $missingYamlFiles | ForEach-Object {
     $relativeYamlFilePath   = $_.RelativeFilePath
     $relativeYamlFolderPath = $relativeYamlFilePath.Substring(0, $relativeYamlFilePath.Length - $fileName.Length)
     $relativeYamlFilePath = $relativeYamlFilePath.Replace("\","/")
-	$relativeYamlFilePath = $prefix + "/"+$relativeYamlFilePath
+	
 
     Write-Color " {white}$($_.RelativeFilePath){gray}"
     $command = "az pipelines create --org $organization --yaml-path $relativeYamlFilePath --folder-path $relativeYamlFolderPath --name $releaseName --description `"Auto Created from $_`" --repository $repositoryUri --branch $branch --repository-type $repositoryType"
