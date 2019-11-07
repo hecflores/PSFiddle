@@ -127,7 +127,7 @@ $missingYamlFiles | ForEach-Object {
     $relativeYamlFilePath   = $_.RelativeFilePath
     $relativeYamlFolderPath = $relativeYamlFilePath.Substring(0, $relativeYamlFilePath.Length - $fileName.Length)
     $relativeYamlFilePath = $relativeYamlFilePath.Replace("\","/")
-	$relativeYamlFilePath = $prefix + "/" + $relativeYamlFilePath 
+	$relativeYamlFilePath = "/"+$prefix + $relativeYamlFilePath 
 
     Write-Color " {white}$($_.RelativeFilePath){gray}"
     $command = "az pipelines create --project $projectId --org $organization --yaml-path $relativeYamlFilePath --folder-path $relativeYamlFolderPath --name $releaseName --description `"Auto Created from $_`" --repository $repositoryUri --branch $branch --repository-type $repositoryType"
@@ -153,7 +153,7 @@ if($deleteDepricatedReleaseDefinitions){
     Write-Color "`r`n{magenta} D e l e t i n g   D e p r i c a t e d   F o l d e r s{gray}"
     $deletedFolders | ForEach-Object {
 
-        $folder = $prefix + "/" + $_
+        $folder = "/" + $prefix + $_
 
 		Write-Color " {white}$($_){gray}"
 		$command = "az pipelines folder --project $projectId  --org $organization -path $folder --yes"
