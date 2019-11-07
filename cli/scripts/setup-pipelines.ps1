@@ -55,6 +55,12 @@ $branch = $branch.Replace("refs/heads/","")
 $rootDirectory = [System.IO.Path]::GetFullPath($rootDirectory)
 $rootDirectory = $rootDirectory -replace "[\/\\]$",""
 
+$serviceConnectionIds = az devops service-endpoint list --org $organization --project $projectId --query "[?name == 'hecflores'].id"
+if(-not $serviceConnectionIds){
+	throw "We require a service connection named 'hecflores'"
+}
+$serviceConnectionId = $serviceConnectionIds[0]
+
 Write-Output "Getting files..."
 $allYamlFiles      = Get-ChildItem -Path $rootDirectory -Filter "*.vsts-ci.yml" -Recurse  
 $existingYamlFiles = az devops invoke --area build --resource definitions --org $organization --route-parameters @("project=$project") --query-parameters @("includeAllProperties=true","repositoryId=$repositoryId","repositoryType=$repositoryType") --api-version 5.1  --query "value[*].{yamlFileName: process.yamlFilename, Id: id}" | ConvertFrom-Json
@@ -130,7 +136,7 @@ $missingYamlFiles | ForEach-Object {
 	$relativeYamlFolderPath = "/"+$prefix + $relativeYamlFolderPath 
 
     Write-Color " {white}$($_.RelativeFilePath){gray}"
-    $command = "az pipelines create --project $projectId --org $organization --yaml-path $relativeYamlFilePath --folder-path $relativeYamlFolderPath --name $releaseName --description `"Auto Created from $_`" --repository $repositoryUri --branch $branch --repository-type $repositoryType"
+    $command = "az pipelines create --project $projectId --org $organization --yaml-path $relativeYamlFilePath --folder-path $relativeYamlFolderPath --name $releaseName --description `"Auto Created from $_`" --repository $repositoryUri --branch $branch --repository-type $repositoryType --service-connection $serviceConnectionId"
     Write-Color "   {gray}$command`r`n"
     if(-not $mocked){
         Invoke-Expression $command
