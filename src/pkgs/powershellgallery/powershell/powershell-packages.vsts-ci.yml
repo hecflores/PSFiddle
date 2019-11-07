@@ -1,6 +1,6 @@
 
 
-name: $(Date:yyyyMMdd)$(Rev:.r)-${{ parameters.suffix }}
+name: $(Date:yyyyMMdd)$(Rev:r)
 
 resources:
   repositories: 
