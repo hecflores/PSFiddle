@@ -1,0 +1,24 @@
+
+
+name: pipeline-management-$(Rev:.r)
+
+resources:
+  repositories: 
+  - repository: PSFiddle
+    type: github
+    endpoint: hecflores
+    name: heflore/PSFiddle
+ 
+trigger:
+   branches:
+    include:
+    - '*'
+   paths:
+    include:
+    - /*
+
+variables:
+- template: /cli/templates/base-variables.yml
+
+jobs:
+- template: /cli/templates/base-management.yml  # Template reference

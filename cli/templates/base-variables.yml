@@ -1,0 +1,15 @@
+
+variables:
+  - group: psfiddle-core-base
+  - name: AZURE_DEVOPS_EXT_PAT
+    value: $(Admin.PAT)
+  - name: PSFiddle.Organization
+    value: $(System.TeamFoundationCollectionUri)
+  - name: PSFiddle.Project
+    value: $(System.TeamProject)
+  - name: PSFiddle.RepositoryId
+    value: $(Build.Repository.ID)
+  - name: Packages.MajorVersion
+    value: 2
+  - name: Packages.MinorVersion
+    value: 0

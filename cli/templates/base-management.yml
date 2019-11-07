@@ -1,0 +1,42 @@
+parameters:
+  preManage: []
+  postManage: []
+  trunkBranch: "refs/heads/master"
+  PSFiddle.Project: $(PSFiddle.Project)
+  PSFiddle.Organization: $(PSFiddle.Organization)
+  Yaml.FolderPath: $(Yaml.FolderPath)
+  PSFiddle.RepositoryId: $(PSFiddle.RepositoryId)
+  Build.Repository.Uri: $(Build.Repository.Uri)
+  Build.Repository.Provider: $(Build.Repository.Provider)
+  Build.SourceBranch: $(Build.SourceBranch)
+  AgentPoolName: "Windows Agents (By User)"
+
+jobs:
+- template: /cli/templates/base.yml  # Template reference
+  parameters:
+    jobs:
+      
+      - job: build
+        pool:
+          vmImage: ${{ parameters.AgentPoolName }}
+        steps:
+        - powershell: |
+            if('$(Build.SourceBranch)' -eq '${{ parameters.trunkBranch }}'){
+              Write-Output "##vso[task.setvariable variable=deleteOldReleaseDefinitions;isOutput=true]`$true"
+            }
+            else{
+              Write-Output "##vso[task.setvariable variable=deleteOldReleaseDefinitions;isOutput=true]`$false"
+            }
+          name: "prework"
+          displayName: "Pre Work"
+
+        - task: PowerShell@2
+          inputs:
+            targetType: filePath
+            filePath: cli/scripts/setup-pipelines.ps1
+            arguments: -organization $(PSFiddle.Organization) -project $(PSFiddle.Project) -rootDirectory $(Yaml.FolderPath) -repositoryId $(PSFiddle.RepositoryId) -repositoryUri $(Build.Repository.Uri) -repositoryType $(Build.Repository.Provider) -branch $(Build.SourceBranch) -deleteDepricatedReleaseDefinitions $(prework.deleteOldReleaseDefinitions)
+            errorActionPreference: Continue
+          name: "setupPipelines"
+          displayName: "Setup Pipelines"
+      
+  

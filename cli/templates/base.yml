@@ -1,0 +1,128 @@
+parameters:
+  jobs: []
+  Build.Repository.LocalPath: $(Build.Repository.LocalPath)
+  Build.TriggeredBy.DefinitionId: $(Build.TriggeredBy.DefinitionId)
+  type: string
+  metadata: {}
+  Packages.MajorVersion: $(Packages.MajorVersion)
+  Packages.MinorVersion: $(Packages.MinorVersion)
+  Yaml.FolderPath: $(Yaml.FolderPath)
+  Pipeline.Workspace: $(Pipeline.Workspace)
+  mainPool: "Windows Agents (By User)"
+ 
+jobs:
+  - job: dependencies
+    pool:
+      name: ${{ parameters.mainPool }}
+    steps:
+    - powershell: |
+          az extension add --name azure-devops 
+
+          Write-Output "Get Build Yaml Path... in folder `"$(Build.Repository.LocalPath)`""
+          $relativeFilePath = (az devops invoke --area build --resource definitions --org $(System.TeamFoundationCollectionUri) --route-parameters @("project=PSFiddle") --query-parameters @("includeAllProperties=true","definitionIds=$(System.DefinitionId)") --api-version 5.1  --query "value[*].process.yamlFilename" | ConvertFrom-Json)
+          $filePath = $relativeFilePath
+          $folderPath = [System.IO.Path]::GetDirectoryName($filePath)
+          Write-Output "Folder - `"$($folderPath)`""
+          Write-Output "##vso[task.setvariable variable=yamlFolderPath;isOutput=true]$($folderPath)"
+      name: setYamlFolderPath
+      displayName: Set Yaml Folder Path
+      errorActionPreference: SilentlyContinue
+
+    - powershell: Write-Output '$(setYamlFolderPath.yamlFolderPath)'
+      name: exportedYamlFolderPath
+      displayName: Export Yaml Folder Path
+
+    - ${{ if eq(parameters.type, 'NuGetPackage') }}:
+      - powershell: |
+          
+          Register-PackageSource -Name MyNuGet -Location https://www.nuget.org/api/v2 -ProviderName NuGet -ErrorAction SilentlyContinue -Verbose
+          Get-PackageSource
+          $packageName = "${{ parameters.metadata.packageName }}"
+          $minVersion = "$(Packages.MajorVersion).$(Packages.MinorVersion).0"
+          Write-Output "Package Name - `"$($packageName)`""
+          Write-Output "Min Version - `"$($minVersion)`""
+          Write-Output "Finding package..."
+          $cmd = "(Find-Package $packageName -MinimumVersion $minVersion -ErrorAction SilentlyContinue).Version"
+          Write-Output "Cmd - `"$cmd`""
+          $maxVersion = Invoke-Expression $cmd
+          
+          if(-not $maxVersion) { 
+            Write-Output "No Package Found..."
+            $maxVersion = $minVersion 
+          }
+
+          Write-Output "Max Version - `"$($maxVersion)`""
+
+          $regex = [regex]::new('^(\d+)\.(\d+)\.(\d+)$')
+          [int] $lowerVersion = $regex.Replace($maxVersion, '$3')
+          $newVersion = $regex.Replace($maxVersion, '$1.$2.'+($lowerVersion+1))
+          Write-Output "New Version - `"$($newVersion)`"" 
+          Write-Output "##vso[task.setvariable variable=MaxVersion;isOutput=true]$($maxVersion)"
+          Write-Output "##vso[task.setvariable variable=NewVersion;isOutput=true]$($newVersion)"
+        name: fetchPackageVersions
+        displayName: Export Yaml Folder Path
+  - ${{ if eq(parameters.type, 'NuGetPackage') }}:
+    - job: build
+      dependsOn: dependencies
+      variables:
+        - name: Yaml.RelativeFolderPath
+          value: $[ dependencies.dependencies.outputs['setYamlFolderPath.yamlFolderPath'] ]
+        - name: Yaml.FolderPath
+          value: $(Build.Repository.LocalPath)/$(Yaml.RelativeFolderPath)
+        - name: Packages.MaxVersion
+          value: $[ dependencies.dependencies.outputs['fetchPackageVersions.MaxVersion'] ]
+        - name: Packages.NewVersion
+          value: $[ dependencies.dependencies.outputs['fetchPackageVersions.NewVersion'] ]
+      pool:
+        name: ${{ parameters.mainPool }}
+      steps:
+        - script: dotnet restore
+          displayName: Restore ${{ parameters.metadata.packageName }}
+          workingDirectory: $(Yaml.FolderPath)
+        - script: dotnet build
+          displayName: Build ${{ parameters.metadata.packageName }}
+          workingDirectory: $(Yaml.FolderPath)
+        - script: dotnet pack -p:PackageVersion=$(Packages.NewVersion) -o $(Yaml.FolderPath)/packed
+          displayName: Pack ${{ parameters.metadata.packageName }}
+          workingDirectory: $(Yaml.FolderPath)
+        - publish: $(Yaml.FolderPath)/packed
+          artifact: packages
+
+    - deployment: publish
+      dependsOn: build
+      pool:
+        name: ${{ parameters.mainPool }}
+      environment: test
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+              - download: current
+                artifact: packages
+              - script: dotnet nuget push **/*.nupkg -k oy2lrq4gn6ipf4zpxyjqxdgux6j7ld3e3fvovn2rpqdsxy -s https://www.nuget.org/
+                displayName: Push ${{ parameters.metadata.packageName }}
+                workingDirectory: $(Pipeline.Workspace)/packages
+  - ${{ each job in parameters.jobs }}: # Then do each job
+    - ${{ each pair in job }}:          # Insert all properties other than "dependsOn"
+        ${{ if and(ne(pair.key, 'dependsOn'),ne(pair.key, 'variables'), ne(pair.key, 'pool')) }}:
+          ${{ pair.key }}: ${{ pair.value }}
+      pool:
+        name: ${{ parameters.mainPool }}    # your job runs on an agent in this pool
+      variables:
+        - name: Yaml.RelativeFolderPath
+          value: $[ dependencies.dependencies.outputs['setYamlFolderPath.yamlFolderPath'] ]
+        - name: Yaml.FolderPath
+          value: $(Build.Repository.LocalPath)/$(Yaml.RelativeFolderPath)
+        - ${{ if eq(parameters.type, 'NuGetPackage') }}:
+          - name: Packages.MaxVersion
+            value: $[ dependencies.dependencies.outputs['fetchPackageVersions.MaxVersion'] ]
+          - name: Packages.NewVersion
+            value: $[ dependencies.dependencies.outputs['fetchPackageVersions.NewVersion'] ]
+        - ${{ if job.variables }}:
+          - ${{ job.variables }}
+      dependsOn:                        # Inject dependency
+      - dependencies
+      - ${{ if job.dependsOn }}:
+        - ${{ job.dependsOn }}
+  
+  

@@ -1,0 +1,37 @@
+parameters:
+  jobs: []
+  Build.Repository.LocalPath: $(Build.Repository.LocalPath)
+  Build.TriggeredBy.DefinitionId: $(Build.TriggeredBy.DefinitionId)
+  type: string
+  metadata: {}
+  Packages.MajorVersion: $(Packages.MajorVersion)
+  Packages.MinorVersion: $(Packages.MinorVersion)
+  Yaml.FolderPath: $(Yaml.FolderPath)
+  Pipeline.Workspace: $(Pipeline.Workspace)
+  mainPool: "Windows Agents (By User)"
+ 
+jobs:
+  - ${{ each job in parameters.jobs }}: # Then do each job
+    - ${{ each pair in job }}:          # Insert all properties other than "dependsOn"
+        ${{ if and(ne(pair.key, 'dependsOn'),ne(pair.key, 'variables'), ne(pair.key, 'pool')) }}:
+          ${{ pair.key }}: ${{ pair.value }}
+      pool:
+        name: ${{ parameters.mainPool }}    # your job runs on an agent in this pool
+      variables:
+        - name: Yaml.RelativeFolderPath
+          value: $[ dependencies.dependencies.outputs['setYamlFolderPath.yamlFolderPath'] ]
+        - name: Yaml.FolderPath
+          value: $(Build.Repository.LocalPath)/$(Yaml.RelativeFolderPath)
+        - ${{ if eq(parameters.type, 'NuGetPackage') }}:
+          - name: Packages.MaxVersion
+            value: $[ dependencies.dependencies.outputs['fetchPackageVersions.MaxVersion'] ]
+          - name: Packages.NewVersion
+            value: $[ dependencies.dependencies.outputs['fetchPackageVersions.NewVersion'] ]
+        - ${{ if job.variables }}:
+          - ${{ job.variables }}
+      dependsOn:                        # Inject dependency
+      - dependencies
+      - ${{ if job.dependsOn }}:
+        - ${{ job.dependsOn }}
+  
+  
