@@ -55,11 +55,11 @@ $branch = $branch.Replace("refs/heads/","")
 $rootDirectory = [System.IO.Path]::GetFullPath($rootDirectory)
 $rootDirectory = $rootDirectory -replace "[\/\\]$",""
 
-$serviceConnectionIds = az devops service-endpoint list --org $organization --project $projectId --query "[?name == 'hecflores'].id"
+$serviceConnectionIds = (az devops service-endpoint list --org $organization --project $projectId --query "[?name == 'hecflores'].id") | ConvertFrom-Json
 if(-not $serviceConnectionIds){
 	throw "We require a service connection named 'hecflores'"
 }
-$serviceConnectionId = $serviceConnectionIds[0]
+$serviceConnectionId = $serviceConnectionIds
 
 Write-Output "Getting files..."
 $allYamlFiles      = Get-ChildItem -Path $rootDirectory -Filter "*.vsts-ci.yml" -Recurse  
