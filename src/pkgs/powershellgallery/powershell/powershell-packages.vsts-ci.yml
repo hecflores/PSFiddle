@@ -17,12 +17,12 @@ stages:
   - stage: Build 
     displayName: Build 
     jobs:  
-       job: Build
-       displayName: Build 
-       pool:
-          vmImage: 'ubuntu-latest'
-       steps:
-          script: echo "Hector"
+       - job: Build
+         displayName: Build 
+         pool:
+            vmImage: 'ubuntu-latest'
+         steps:
+            script: echo "Hector"
        
        
     
