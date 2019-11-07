@@ -123,7 +123,7 @@ $missingYamlFiles | ForEach-Object {
     $relativeYamlFilePath = $relativeYamlFilePath.Replace("\","/")
 
     Write-Color " {white}$($_.RelativeFilePath){gray}"
-    $command = "az pipelines create --yaml-path $relativeYamlFilePath --folder-path $relativeYamlFolderPath --name $releaseName --description `"Auto Created from $_`" --repository $repositoryUri --branch $branch --repository-type $repositoryType"
+    $command = "az pipelines create --org $organization --yaml-path $relativeYamlFilePath --folder-path $relativeYamlFolderPath --name $releaseName --description `"Auto Created from $_`" --repository $repositoryUri --branch $branch --repository-type $repositoryType"
     Write-Color "   {gray}$command`r`n"
     if(-not $mocked){
         Invoke-Expression $command
@@ -137,7 +137,7 @@ if($deleteDepricatedReleaseDefinitions){
         $definitionId = $_.DefinitionId
 
 		Write-Color " {white}$($_.RelativeFilePath){gray}"
-		$command = "az pipelines delete --id $definitionId --yes"
+		$command = "az pipelines delete --org $organization --id $definitionId --yes"
 		Write-Color "   {gray}$command`r`n"
 		if(-not $mocked){
 		    Invoke-Expression $command
@@ -149,7 +149,7 @@ if($deleteDepricatedReleaseDefinitions){
         $folder = $_
 
 		Write-Color " {white}$($_){gray}"
-		$command = "az pipelines folder -path $folder --yes"
+		$command = "az pipelines folder --org $organization -path $folder --yes"
 		Write-Color "   {gray}$command`r`n"
         if(-not $mocked){
 		    Invoke-Expression $command
