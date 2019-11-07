@@ -2,12 +2,6 @@
 
 name: pipeline-management-$(Rev:.r)
 
-resources:
-  repositories: 
-  - repository: PSFiddle
-    type: github
-    name: heflore/PSFiddle
- 
 trigger:
    branches:
     include:
