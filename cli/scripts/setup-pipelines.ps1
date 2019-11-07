@@ -7,6 +7,7 @@ Param(
     [string] $rootDirectory,
     [string] $branch,
 	[bool]   $deleteDepricatedReleaseDefinitions = $false,
+	[string] $prefix = "hecflores.PSFiddle"
     [bool]   $mocked = $false
 )
 
@@ -121,6 +122,7 @@ $missingYamlFiles | ForEach-Object {
     $relativeYamlFilePath   = $_.RelativeFilePath
     $relativeYamlFolderPath = $relativeYamlFilePath.Substring(0, $relativeYamlFilePath.Length - $fileName.Length)
     $relativeYamlFilePath = $relativeYamlFilePath.Replace("\","/")
+	$relativeYamlFilePath = $prefix + "/"+$relativeYamlFilePath
 
     Write-Color " {white}$($_.RelativeFilePath){gray}"
     $command = "az pipelines create --org $organization --yaml-path $relativeYamlFilePath --folder-path $relativeYamlFolderPath --name $releaseName --description `"Auto Created from $_`" --repository $repositoryUri --branch $branch --repository-type $repositoryType"
