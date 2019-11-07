@@ -127,7 +127,7 @@ $missingYamlFiles | ForEach-Object {
     $relativeYamlFilePath   = $_.RelativeFilePath
     $relativeYamlFolderPath = $relativeYamlFilePath.Substring(0, $relativeYamlFilePath.Length - $fileName.Length)
     $relativeYamlFilePath = $relativeYamlFilePath.Replace("\","/")
-	$relativeYamlFilePath = "/"+$prefix + $relativeYamlFilePath 
+	$relativeYamlFolderPath = "/"+$prefix + $relativeYamlFolderPath 
 
     Write-Color " {white}$($_.RelativeFilePath){gray}"
     $command = "az pipelines create --project $projectId --org $organization --yaml-path $relativeYamlFilePath --folder-path $relativeYamlFolderPath --name $releaseName --description `"Auto Created from $_`" --repository $repositoryUri --branch $branch --repository-type $repositoryType"
