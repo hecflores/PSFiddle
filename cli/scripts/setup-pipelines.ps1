@@ -7,7 +7,7 @@ Param(
     [string] $rootDirectory,
     [string] $branch,
 	[bool]   $deleteDepricatedReleaseDefinitions = $false,
-	[string] $prefix = "hecflores.PSFiddle"
+	[string] $prefix = "hecflores.PSFiddle",
     [bool]   $mocked = $false
 )
 
