@@ -12,22 +12,17 @@ trigger:
   branches:
     include:
     - master
-  paths:
-    include:
-    - ${{ parameters.folder }}
    
 stages:
   - stage: Build 
-    displayName: Build ${{ parameters.name }}
+    displayName: Build 
     jobs:  
        job: Build
-       displayName: Build ${{ parameters.name }}
+       displayName: Build 
        pool:
           vmImage: 'ubuntu-latest'
        steps:
-          script: dotnet build
-          displayName: Build ${{ parameters.name }}
-          workingDirectory: ${{ parameters.folder }}
+          script: echo "Hector"
        
        
     
