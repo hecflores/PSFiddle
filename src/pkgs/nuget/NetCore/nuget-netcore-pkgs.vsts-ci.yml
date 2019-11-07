@@ -6,7 +6,7 @@ resources:
   repositories: 
   - repository: PSFiddle
     type: github
-    name: heflore/PSFiddle
+    name: hecflores/PSFiddle
     
 trigger:
   branches:
