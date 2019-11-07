@@ -5,6 +5,7 @@ Param(
     [string] $repositoryUri,
     [string] $repositoryType,
     [string] $rootDirectory,
+	[string] $projectId = "PSFiddle",
     [string] $branch,
 	[bool]   $deleteDepricatedReleaseDefinitions = $false,
 	[string] $prefix = "hecflores.PSFiddle",
@@ -129,7 +130,7 @@ $missingYamlFiles | ForEach-Object {
 	
 
     Write-Color " {white}$($_.RelativeFilePath){gray}"
-    $command = "az pipelines create --org $organization --yaml-path $relativeYamlFilePath --folder-path $relativeYamlFolderPath --name $releaseName --description `"Auto Created from $_`" --repository $repositoryUri --branch $branch --repository-type $repositoryType"
+    $command = "az pipelines create --project $projectId --org $organization --yaml-path $relativeYamlFilePath --folder-path $relativeYamlFolderPath --name $releaseName --description `"Auto Created from $_`" --repository $repositoryUri --branch $branch --repository-type $repositoryType"
     Write-Color "   {gray}$command`r`n"
     if(-not $mocked){
         Invoke-Expression $command
@@ -143,7 +144,7 @@ if($deleteDepricatedReleaseDefinitions){
         $definitionId = $_.DefinitionId
 
 		Write-Color " {white}$($_.RelativeFilePath){gray}"
-		$command = "az pipelines delete --org $organization --id $definitionId --yes"
+		$command = "az pipelines delete --project $projectId  --org $organization --id $definitionId --yes"
 		Write-Color "   {gray}$command`r`n"
 		if(-not $mocked){
 		    Invoke-Expression $command
@@ -155,7 +156,7 @@ if($deleteDepricatedReleaseDefinitions){
         $folder = $_
 
 		Write-Color " {white}$($_){gray}"
-		$command = "az pipelines folder --org $organization -path $folder --yes"
+		$command = "az pipelines folder --project $projectId  --org $organization -path $folder --yes"
 		Write-Color "   {gray}$command`r`n"
         if(-not $mocked){
 		    Invoke-Expression $command
