@@ -6,7 +6,6 @@ resources:
   repositories: 
   - repository: PSFiddle
     type: github
-    endpoint: hecflores
     name: heflore/PSFiddle
  
 trigger:
