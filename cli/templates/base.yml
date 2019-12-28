@@ -109,7 +109,7 @@ jobs:
       pool:
         name: ${{ parameters.mainPool }}    # your job runs on an agent in this pool
       variables:
-        - name: Yaml.RelativeFolderPath
+        - name: Yaml.RelativeFolderPath 
           value: $[ dependencies.dependencies.outputs['setYamlFolderPath.yamlFolderPath'] ]
         - name: Yaml.FolderPath
           value: $(Build.Repository.LocalPath)/$(Yaml.RelativeFolderPath)
