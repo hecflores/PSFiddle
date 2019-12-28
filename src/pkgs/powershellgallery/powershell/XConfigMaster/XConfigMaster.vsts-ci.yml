@@ -32,7 +32,7 @@ jobs:
       steps:
         - powershell: |
           
-          $packageName = "${{ variables.PackageName }}"
+          $packageName = "$(PackageName)"
           $minVersion = "$(Packages.MajorVersion).$(Packages.MinorVersion).0"
           Write-Output "Package Name - `"$($packageName)`""
           Write-Output "Min Version - `"$($minVersion)`""
