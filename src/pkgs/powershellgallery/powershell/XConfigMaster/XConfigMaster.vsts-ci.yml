@@ -58,7 +58,7 @@ jobs:
           - powershell: |
               Publish-Module -Path "$(Packages.Path)" -Version $(Packages.NewVersion)
             name: publishModule
-            displayName: Publishing Module ${{ variables.PackageName }}
+            displayName: Publishing Module 
           
           
     
