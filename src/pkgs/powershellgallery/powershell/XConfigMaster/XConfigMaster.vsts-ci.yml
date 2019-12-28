@@ -19,7 +19,7 @@ jobs:
 - template: /cli/templates/base.yml  # Template reference
   parameters:
     jobs:
-      - job: build
+      - job: buildPowershell
         variables:
           - name: PackageName
             value: XConfigMaster
