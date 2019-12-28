@@ -1,11 +1,6 @@
 
 name: PSFiddle.Common.$(Rev:r)
 
-resources:
-  repositories: 
-  - repository: PSFiddle
-    type: github 
-    name: hecflores/PSFiddle
  
 trigger:
   branches:
