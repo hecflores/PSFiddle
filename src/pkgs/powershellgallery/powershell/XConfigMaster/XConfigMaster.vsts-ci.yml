@@ -20,7 +20,6 @@ jobs:
   parameters:
     jobs:
       - job: build
-        dependsOn: dependencies
         variables:
           - name: PackageName
             value: XConfigMaster
