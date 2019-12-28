@@ -18,12 +18,12 @@ variables:
 jobs:
 - template: /cli/templates/base.yml  # Template reference
   parameters:
-    - jobs:
+    jobs:
       - job: build
         dependsOn: dependencies
         variables:
           - name: PackageName
-          - value: XConfigMaster
+            value: XConfigMaster
           - name: Packages.Path
             value: $(Yaml.FolderPath)/$(PackageName).psd1
           - name: Packages.MaxVersion
