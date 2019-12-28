@@ -1,29 +1,34 @@
 
-
-name: $(Date:yyyyMMdd)$(Rev:r)
+name: PSFiddle.Common.$(Rev:r)
 
 resources:
   repositories: 
   - repository: PSFiddle
-    type: github
+    type: github 
     name: hecflores/PSFiddle
-    
+ 
 trigger:
   branches:
     include:
     - master
-   
-stages:
-  - stage: Build 
-    displayName: Build 
-    jobs:  
-       - job: Build
-         displayName: Build 
-         pool:
-            vmImage: 'ubuntu-latest'
-         steps:
-            script: echo "Hector"
-       
-       
+  paths:
+    include:
+    - src/pkgs/powershellgallery/powershell/*
+    - cli/templates/base.yml
+    
+
+variables:
+- template: /cli/templates/base-variables.yml
+
+jobs:
+- template: /cli/templates/base.yml  # Template reference
+  parameters:
+    type: NuGetPackage
+    metadata:
+      packageName: PSFiddle.Common
+          
+    
+
+
     
    
