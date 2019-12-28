@@ -13,7 +13,6 @@ trigger:
     
 
 variables:
-- PackageName: XConfigMaster
 - template: /cli/templates/base-variables.yml
 
 jobs:
@@ -23,6 +22,8 @@ jobs:
       job: build
       dependsOn: dependencies
       variables:
+        - name: PackageName
+        - value: XConfigMaster
         - name: Packages.Path
           value: $(Yaml.FolderPath)/$(PackageName).psd1
         - name: Packages.MaxVersion
