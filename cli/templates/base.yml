@@ -8,7 +8,7 @@ parameters:
   Packages.MinorVersion: $(Packages.MinorVersion)
   Yaml.FolderPath: $(Yaml.FolderPath)
   Pipeline.Workspace: $(Pipeline.Workspace)
-  mainPool: "Windows Agents (By User)"
+  mainPool: "Windows Agents"
  
 jobs:
   - job: dependencies
